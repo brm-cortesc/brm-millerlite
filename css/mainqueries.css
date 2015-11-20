@@ -1,0 +1,521 @@
+ @charset "UTF-8";
+/* CSS Document */
+/*---------------------------------- ------------- -----------------------------*/
+/*---------------------------------- PIXEL PERFECT -----------------------------*/
+/*---------------------------------- ------------- -----------------------------*/
+@media only screen and (min-width: 925px) {
+  /*---------------------------------- Validador De Edad -----------------------------*/
+.logoMillerLite {
+  display: inline-block;
+  width: 27%;
+  padding: 0.3rem;
+  vertical-align: top;
+}
+.validationDateWrapper h2 {
+  width: 71%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.logoMillerLite img {
+  display: inline-block;
+  width: auto;
+  width: 100%;
+}
+}
+@media only screen and (min-width: 40.0625em) {
+/*---------------------------------- Generales--------------------------------------*/
+h1 {
+  font-size: 3.75rem;
+  line-height: 3.1rem;
+}
+h2 {
+  font-size: 3.3125rem;
+  line-height: 3.1rem;
+}
+/*---------------------------------- Menu --------------------------------------*/
+.effect-airbnb.animate .container{
+  opacity:1;
+}
+.outer-nav.vertical {
+}
+/*---------------------------------- logg in Wrapper -------------------------------*/
+/*---------------------------------- Validador De Edad -----------------------------*/
+.validationDateWrapper {
+  margin-top: 10%;
+}
+.validationDateWrapper h2 {
+  text-align:left;
+}
+.avisoValidador p {
+  font-size: 0.8rem;
+  line-height: 0.95rem;
+}
+.minCan{
+  display:none;
+}
+.largeCan{
+  display:block;
+}
+/*------------------------------------------cabecera--------------------------------------*/
+.bodcopy p {
+  text-align: left
+}
+.midBar .row div h4 {
+  padding: 0 0 0 9%;
+  font-size: 2.2rem;
+}
+.reloj{
+  text-align: center;
+}
+.flip-clock-divider.seconds .flip-clock-label {
+  right: -85px !important;
+}
+.flip-clock-divider.minutes .flip-clock-label {
+  right: -86px !important;
+}
+.flip-clock-divider .flip-clock-label {
+  position: absolute !important;
+  top: 4em !important;
+  right: -75px !important;
+  color: white !important;
+  text-shadow: none !important;
+  font-size: 1.6rem !important;
+}
+.flip-clock-wrapper ul{
+margin: 5px !important;
+width: 47px !important;
+height: 90px !important;
+font-size: 80px !important;
+font-weight: bold !important;
+line-height: 87px !important;
+border-radius: 6px !important;
+}
+
+.flip-clock-wrapper ul li a div div.inn {
+  font-size: 4.5rem !important;
+}
+.flip-clock-wrapper{
+  width: auto !important;
+  display: inline-block;
+}
+.tit-1 {
+}
+.brd-cmp {
+  height: 608px;
+  background-size: 85%;
+}
+.tapa {
+}
+/*------------------------------- mecanica ----------------------------*/
+.showDesp1 .row .slider1{
+    /*width: 65%;*/
+    max-width: 570px;
+}
+.slick-prev, .slick-next{
+  margin-top: 0;
+  height: 30%;
+  top: 38%;
+  margin-bottom: 0;
+  width: 60px;
+}
+.slick-prev {
+  left: 0;
+  }
+  .slick-next {
+  right: 0;
+}
+.slick-prev:before, .slick-next:before{
+    font-size: 43px;
+  }
+/*------------------------ Bara divisora --------------------*/
+
+.midBar {
+  padding:1rem 11% 2rem 11%;
+
+}
+.midBar .row div h4 {
+  padding: 0 0 0 0%;
+  width: 103%;
+}
+.midBar .row div p {
+  text-align: left;
+  width: 103%;
+}
+.midBar .row nav{
+  text-align: center;
+}
+.midBar .row nav .participarBTN {
+  font-family: 'akzidenz-cond', impact, arial, sans-serif;
+  color: #fff;
+  letter-spacing: 0rem;
+  text-shadow: 0 3px 3px #68001d;
+  font-size: 2.7rem;
+  display: inline-block;
+  vertical-align: middle;
+    padding: 5% 0 6% 0;
+  line-height: 2.8rem;
+  -webkit-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 1);
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 1);
+  width: 47%;
+}
+.midBar .row nav .participarBTN2 {
+  font-family: 'akzidenz-cond', impact, arial, sans-serif;
+  color: #fff;
+  letter-spacing: 0rem;
+  text-shadow: 0 3px 3px #68001d;
+  font-size: 2.7rem;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 5% 0 6% 0;
+  line-height: 2.8rem;
+  -webkit-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 1);
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 1);
+  width: 47%;
+}
+.search-wrapper input {
+  width: 85.5%;
+  height: 40px;
+  padding: 10px 5px;
+  float: left;
+  font-size: 1.1rem;
+  font-family: 'robotoregular', arial, sans-serif;
+  color: #ccc;
+  border: 2px solid #D0043C;
+  background: transparent;
+  border-radius: 3px 0 0 3px;
+}
+/*--------------------------------------galeria---------------------------------------*/
+.verPerfilBTN{
+  width: 15%;
+}
+.statusXPUser{
+  width: 49.5%;
+}
+.wish h4{
+  font-size: 1.6rem;
+  line-height: 1.4rem;
+}
+.count {
+  height: 45px;
+}
+.numb {
+  font-size: 5rem;
+  line-height: 2.2rem;
+}
+.count a {
+  font-size: 2rem;
+  line-height: 2.8rem;
+}
+.count a h5{
+  font-size:2.125rem;
+}
+/*---------------------------- formulario ---------------------------------------*/
+.desp2 {
+  /* padding: 1.5% 0 0 0; */
+ }
+ .slider1 {
+  /*width: 64%;*/
+ }
+ .slider2 {
+  /* width: 64%; */
+ }
+ #progressbar li {/* width: 31.8%; */}
+ #progressbar {
+  margin-bottom: 0px;
+  overflow: hidden;
+  counter-reset: step;
+  margin: 1rem auto 0.5rem;
+  width: 76%;
+}
+.b-1{
+  display:block;
+}
+.bodcopy {
+  text-align: left;
+  margin:0 auto;
+  width: 80%;
+}
+.bodcopy p {
+  font-size: 1.1rem;
+  line-height: 1.2;
+  width: 98%;
+}
+.midBar h4 {text-align: left;
+}
+.tit-1 {
+ text-align:center;
+  line-height: 3rem;
+  font-size: 3.6rem;
+}
+#msform input, #msform textarea {
+  padding: 11px;
+  border: none;
+  height: 4rem;
+  border-radius: 0px;
+  margin-bottom: 8px;
+}
+select{
+  height: 4rem;
+  margin-bottom: 11px;
+}
+.desp2 {
+}
+
+/*------------------------ Footer -----------------------*/
+footer {
+  padding: 0.4rem 0rem 0.5rem 0rem;
+}
+footer nav {
+  margin-top: 0.5rem;
+}
+}
+@media only screen and (min-width: 64.0625em) {
+  /*---------------------------------- Generales--------------------------------------*/
+.totalizer{
+  /*height:100%;*/
+  min-height:100%;
+}
+.midBar .row nav .participarBTN {
+  font-family: 'akzidenz-cond', impact, arial, sans-serif;
+  color: #fff;
+  letter-spacing: 0rem;
+  text-shadow: 0 3px 3px #68001d;
+  font-size: 2rem;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 5% 0 6% 0;
+  line-height: 2.8rem;
+  -webkit-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 1);
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 1);
+  width: 49%;
+}
+.midBar .row nav .participarBTN2 {
+  font-family: 'akzidenz-cond', impact, arial, sans-serif;
+  color: #fff;
+  letter-spacing: 0rem;
+  text-shadow: 0 3px 3px #68001d;
+  font-size: 2rem;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 5% 0 6% 0;
+  line-height: 2.8rem;
+  -webkit-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 1);
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 1);
+  width: 48%;
+}
+.search-wrapper input {
+  width: 88.5%;
+  height: 40px;
+  padding: 10px 5px;
+  float: left;
+  font-size: 1.1rem;
+  font-family: 'robotoregular', arial, sans-serif;
+  color: #ccc;
+  border: 2px solid #D0043C;
+  background: transparent;
+  border-radius: 3px 0 0 3px;
+}
+.midBar {
+  padding:1rem 11% 1.2rem 11%;
+}
+.bodcopy {
+  text-align: left;
+  margin:0 auto;
+  width: 100%;
+}
+/*---------------------------------- Menu Inside--------------------------------------*/
+/*---------------------------------- logg in Wrapper -------------------------------*/
+/*---------------------------------- Validador De Edad -----------------------------*/
+.beerSmoke {
+  display:block;
+}
+.validationDateWrapper {
+  margin-top: 20%;
+}
+.logoMillerLite {
+  display: none !important;
+}
+.validationDateWrapper h2 {
+  width:100% !important;
+}
+.validationDate input {
+  font-size: 4rem;
+}
+.avisoValidador p {
+  font-size: 0.8rem;
+  line-height: 0.95rem;
+}
+.diasWrapper .validationDate input {
+  font-size: 2.8rem;
+}
+.millerTimeSmoke {
+  margin-bottom: 0%;
+}
+.iceCan{
+  display:none;
+}
+/*------------------------------------------cabecera--------------------------------------*/
+.reloj{
+  text-align: left;
+}
+.reloj div{
+  margin:none !important;
+}
+.flip-clock-wrapper {
+  /*width: 117.5% !important;*/
+}
+.tit-1 {
+  text-align:left;
+}
+.fillHeadOfficial{
+  background-color:transparent;
+  display:block;
+}
+.oficialWrapper{
+  padding: 0%;
+}
+/*------------------------ Bara divisora --------------------*/
+.midBar{
+padding: 1rem 1rem 1.2rem 0.8rem;
+  -webkit-box-shadow:inset 0 3px 5px 0 rgba(0,70,132,0.75), 0 10px 20px 0 rgba(0,0,0,0.45);
+  box-shadow:inset 0 3px 5px 0 rgba(0,70,132,0.75), 0 10px 20px 0 rgba(0,0,0,0.45);
+    background: rgb(0,81,147);
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDA1MTkzIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMjUlIiBzdG9wLWNvbG9yPSIjMDA5M2Q5IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNzUlIiBzdG9wLWNvbG9yPSIjMDA5M2Q5IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwNTE5MyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+  background: -moz-linear-gradient(-45deg, rgba(0,81,147,1) 0%, rgba(0,147,217,1) 25%, rgba(0,147,217,1) 75%, rgba(0,81,147,1) 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(0,81,147,1)), color-stop(25%, rgba(0,147,217,1)), color-stop(75%, rgba(0,147,217,1)), color-stop(100%, rgba(0,81,147,1)));
+  background: -webkit-linear-gradient(-45deg, rgba(0,81,147,1) 0%, rgba(0,147,217,1) 25%, rgba(0,147,217,1) 75%, rgba(0,81,147,1) 100%);
+  background: -o-linear-gradient(-45deg, rgba(0,81,147,1) 0%, rgba(0,147,217,1) 25%, rgba(0,147,217,1) 75%, rgba(0,81,147,1) 100%);
+  background: -ms-linear-gradient(-45deg, rgba(0,81,147,1) 0%, rgba(0,147,217,1) 25%, rgba(0,147,217,1) 75%, rgba(0,81,147,1) 100%);
+  background: linear-gradient(135deg, rgba(0,81,147,1) 0%, rgba(0,147,217,1) 25%, rgba(0,147,217,1) 75%, rgba(0,81,147,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005193', endColorstr='#005193', GradientType=1 );
+}
+.midBar .row nav{
+  width:45%;
+  text-align: left;
+  margin-top: 1%;
+}
+.midBar .row nav .participarBTN{
+  -webkit-box-shadow: 0px 3px 3px 0px rgba(8, 74, 108, 1);
+  box-shadow:0px 3px 3px 0px rgba(8, 74, 108, 1);
+}
+.midBar .row nav .comoParticiparBTN{
+  -webkit-box-shadow: 0px 3px 3px 0px rgba(8, 74, 108, 1);
+     box-shadow: 0px 3px 3px 0px rgba(8, 74, 108, 1);
+}
+/*--------------------------------------galeria---------------------------------------*/
+.pd_s{
+  width:98%;
+  line-height: 0;
+  min-height: 229px;
+  }
+.statusXPUser{
+  width: 100%;
+  display: inline;
+}
+.insideStatus{
+  margin-left: 24.65%;
+}
+.insideStatusOpen{
+  width:72.8%;
+}
+.insideStatusOpen .textStatus{
+  margin-top: 0%;
+  margin-left:0%;
+  max-width: 32rem;
+}
+.insideStatusOpen nav{
+  width: 95%;
+  margin-left:0%;
+}
+/*------------------- hider --------------------*/
+.insideStatusOpen + .cuboGaleria .gallery .userGaleryimg{
+  display: block;
+}
+.insideStatusOpen + .cuboGaleria .gallery .count{
+  display:block;
+}
+.insideStatusOpen + .cuboGaleria .gallery .wish{
+  height:100%;
+  background:none;
+  background-color: #fff;
+  background: url("../images/pix.png")repeat;
+}
+.insideStatusOpen + .cuboGaleria .gallery .wish h4{
+  display:none
+}
+/*------------------- hider --------------------*/
+.showStatusbar{
+  position:absolute;
+  }
+.cuboGaleria{
+  width: 23.4%;
+}
+.wish {
+  padding: 2% 0 0 2%;
+}
+.count {
+  height: 36px;
+}
+.numb {
+  font-size: 3.5rem;
+}
+.midBar .row div {
+  padding-left: 2%;
+}
+.midBar .row div p {
+  text-align: left;
+  width: 95%;
+}
+
+.brd-cmp {
+  height: 426px;
+  background-size: 85%;
+}
+
+}
+@media only screen and (min-width: 90.0625em) {
+  /*---------------------------------- Validador De Edad -----------------------------*/
+.beerSmoke {
+  width: 45%;
+  left: 20%;
+}
+}
+@media only screen and (min-width: 120em) {
+  /*---------------------------------- Validador De Edad -----------------------------*/
+.beerSmoke {
+  width: 35%;
+  left: 25%;
+}
+}
+
+/**/
+  @media screen and ( min-height: 810px ) and (min-width: 40.0625em)  {
+    /*---------------------------------- Generales--------------------------------------*/
+.totalizer{
+  height:100% !important;
+  min-height:100%;
+ }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

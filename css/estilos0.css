@@ -1,0 +1,73 @@
+/*@media only screen and (max-width: 640px) {
+    #reloj{
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+}
+
+@media only screen and (min-width: 641px) {
+    #reloj{
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+}*/
+
+.cuadro{
+      width: 50px;
+  height: 80px;
+  margin: 2px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.up{
+      width: 50px;
+  height: 39px;
+  border-radius: 6px 6px 0px 0px;
+  background-color: #ce0d3f;
+}
+
+.down{
+      width: 50px;
+  height: 39px;
+  margin-top: 2px;
+  border-radius: 0px 0px 6px 6px;
+  background-color: #ce0d3f;
+}
+
+.cero{
+    font-family: 'akzidenz-cond', impact, arial, sans-serif;
+  width: 50px;
+  height: 80px;
+  text-align: center;
+  vertical-align: bottom;
+  font-size: 72px;
+  margin-top: -38px;
+  color: #FFF;
+}
+
+.puntos{
+    font-family: 'akzidenz-cond', impact, arial, sans-serif;
+  font-size: 74px;
+  color: #FFF;
+  width: 32px;
+  height: 46px;
+  line-height: 0;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+
+#reloj{
+    text-align: center;
+
+}
+
+
+#c3{
+    margin-right: 143px;
+}
+
+
