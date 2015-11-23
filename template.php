@@ -55,6 +55,10 @@ function adaptivetheme_subtheme_process_html(&$vars) {
  */
 
 function millerLiteColTheme_preprocess_page(&$vars) {
+	$header = drupal_get_http_header('status'); 
+  	if ($header == '404 Not Found') {     
+    	$vars['theme_hook_suggestions'][] = 'page__404';
+  	}
 
 	//drupal_add_css(path_to_theme() . '/css/styles.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
 		
