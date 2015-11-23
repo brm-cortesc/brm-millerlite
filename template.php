@@ -68,7 +68,8 @@ function millerLiteColTheme_preprocess_page(&$vars) {
 	drupal_add_js(path_to_theme() . '/js/vendor/jquery.anchor.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
 	drupal_add_js(path_to_theme() . '/js/tabs/initializers.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
 	drupal_add_js(path_to_theme() . '/js/popup.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
-		
+	drupal_add_js(path_to_theme() . '/js/libs/bootstrap.min.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
+	
 
 	//setcookie('validarEdad', '', time() - 60);
 	// Se valida si existe una cookie de la edad
