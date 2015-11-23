@@ -96,13 +96,6 @@
   <?php $block = module_invoke('user', 'block_view','login');
     print render($block['content']); 
   ?>
-  <div class="logFace">
-    <?php 
-      var_dump("sdsadasdas");
-      $block = module_invoke('fboauth', 'block_view','login');
-      print render($block['content']); 
-    ?>
-  </div>
 </div>
 <div class="cont-search">
   <a onclick="cerrar_search();" style="cursor:pointer;">X Cerrar</a>
