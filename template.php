@@ -55,16 +55,20 @@ function adaptivetheme_subtheme_process_html(&$vars) {
  */
 
 function millerLiteColTheme_preprocess_page(&$vars) {
+
+	
+	
 	$header = drupal_get_http_header('status'); 
   	if ($header == '404 Not Found') {     
     	$vars['theme_hook_suggestions'][] = 'page__404';
   	}
 
 	//drupal_add_css(path_to_theme() . '/css/styles.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
-		
+	//drupal_add_js('https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js', array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
+  	drupal_add_js('https://maps.googleapis.com/maps/api/js?key=AIzaSyBDUCrY-Ih_wLT96QyP2yu7ARawGCbjPjM', array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
+	drupal_add_js(path_to_theme() . '/js/jquery-11.js', array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
+	drupal_add_js(path_to_theme() . '/js/libs/bootstrap.min.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
 
-	drupal_add_js('https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
-	drupal_add_js(path_to_theme() . '/js/vendor/jquery-1.9.1.min.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
 	drupal_add_js(path_to_theme() . '/js/tabs/jquery.tabslet.min.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
 	drupal_add_js(path_to_theme() . '/js/tabs/jquery.tabslet.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
 	drupal_add_js(path_to_theme() . '/js/vendor/jquery.tabslet.min.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
@@ -72,17 +76,21 @@ function millerLiteColTheme_preprocess_page(&$vars) {
 	drupal_add_js(path_to_theme() . '/js/vendor/jquery.anchor.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
 	drupal_add_js(path_to_theme() . '/js/tabs/initializers.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
 	drupal_add_js(path_to_theme() . '/js/popup.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
-	drupal_add_js(path_to_theme() . '/js/libs/bootstrap.min.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
 	
 
+	drupal_add_css(path_to_theme() . '/css/brmfiles/style.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
+	drupal_add_css(path_to_theme() . '/css/brmfiles/bootstrap.min.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
+	
 	//setcookie('validarEdad', '', time() - 60);
 	// Se valida si existe una cookie de la edad
 	//var_dump($_COOKIE['validarEdad']);
 	if (isset($_COOKIE['validarEdad']) && ($_COOKIE['validarEdad'])==1){
 		//drupal_add_js(path_to_theme() . '/js/jquery.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
+		drupal_add_js(path_to_theme() . '/js/libs/bootstrap.min.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
 		drupal_add_css(path_to_theme() . '/css/styleHaspe.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
 		drupal_add_js(path_to_theme() . '/js/validacionInicio.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
 		drupal_add_js(drupal_get_path('module', 'BRM_millerlite') . '/js/brmMiller.js');
+		
 	}elseif(isset($_COOKIE['validarEdad']) && ($_COOKIE['validarEdad'])==2){
 		drupal_add_css(path_to_theme() . '/css/vendor/foundation.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
 		drupal_add_css(path_to_theme() . '/css/estilos.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
@@ -93,11 +101,19 @@ function millerLiteColTheme_preprocess_page(&$vars) {
 		drupal_add_css(path_to_theme() . '/js/chosen/chosen.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
 		$vars['theme_hook_suggestions'][] = 'page__menoredad';
 	}else{
+		drupal_add_js(path_to_theme() . '/js/tabs/jquery.tabslet.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
+	drupal_add_js(path_to_theme() . '/js/vendor/jquery.tabslet.min.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
+	drupal_add_js(path_to_theme() . '/js/vendor/rainbow-custom.min.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
+	drupal_add_js(path_to_theme() . '/js/vendor/jquery.anchor.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
+	drupal_add_js(path_to_theme() . '/js/tabs/initializers.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
+	drupal_add_js(path_to_theme() . '/js/popup.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
+	
 		drupal_add_js(path_to_theme() . '/js/vendor/modernizr.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
 		drupal_add_js(path_to_theme() . '/js/jquery.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
 		drupal_add_js(path_to_theme() . '/js/validacionInicio.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
 		drupal_add_js(path_to_theme() . '/js/ga.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
-		 
+		drupal_add_js(path_to_theme() . '/js/tabs/jquery.tabslet.min.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
+	
 		drupal_add_css(path_to_theme() . '/css/vendor/foundation.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
 		drupal_add_css(path_to_theme() . '/css/estilos.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
 		drupal_add_css(path_to_theme() . '/css/estilos2.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
@@ -111,6 +127,7 @@ function millerLiteColTheme_preprocess_page(&$vars) {
 
 function adaptivetheme_subtheme_process_page(&$vars) {
 }
+
 
 
 

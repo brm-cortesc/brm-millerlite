@@ -96,71 +96,261 @@
   <?php $block = module_invoke('user', 'block_view','login');
     print render($block['content']); 
   ?>
-  <div class="logFace">
-    <?php 
-      $block = module_invoke('fboauth', 'block_view','login');
-      print render($block['content']); 
-    ?>
-  </div>
 </div>
 <div class="cont-search">
   <a onclick="cerrar_search();" style="cursor:pointer;">X Cerrar</a>
-  <?php $block = module_invoke('search', 'block_view','form');
-    print render($block['content']); 
-  ?>
+  
 </div>
 <div id="page-wrapper">
   <div id="page" class="<?php print $classes; ?>">
-    <div class="cont-top">
-      <div class="cont-static">
-        <div class="logo-web">
+    
+
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"></div>
+    </div>
+  </div>
+  <section class="container-fluid">
+    <div class="row bg-1">
+      <article class="col-lg-2 col-md-2 col-sm-12 col-xs-12 pd-mm visible-sm visible-lg">
+        <div class="bar-bl">
+          <div class="logo-web">
           <?php 
             if ($site_logo):
               print $site_logo; 
             endif; ?>
         </div>
-        <div class="user-module">
-          <?php $block = module_invoke('BRM_millerlite', 'block_view','user_module');
+          <ul class="nav navbar-nav navbar-right visible-sm busc2">
+            <li class="visible-sm">
+              <form role="search" class="navbar-form navbar-left">
+                <div class="form-group">
+                  <input type="text" placeholder="Buscar" class="form-control">
+                  <button type="submit" class="btn btn-default"> </button><span class="icon-miller-search s-i"></span>
+                </div>
+              </form>
+            </li>
+          </ul>
+        </div>
+        <div class="db visible-lg">
+          <!--dashboard-->
+            <?php $block = module_invoke('BRM_millerlite', 'block_view','user_module');
+            print render($block['content']); 
+            ?>
+            <?php $block = module_invoke('BRM_millerlite', 'block_view','slider_the_new');
             print render($block['content']); 
           ?>
-        </div>
-        <div class="slider-cont">Slider Content</div>
-        <div class="btn-all">Botones todos</div>
-        <div class="icons-social">
+          <h4 class="rec-m">RECIENTES </h4>
+          <div class="recents-w">
+            <div class="rec-box">
+              <div class="pic-ct"></div>
+              <div class="txt-ct">
+                <h3 class="name-t-3">CAMILO RIVERA</h3>
+              </div>
+            </div>
+          </div>
+          <div class="recents-w">
+            <div class="rec-box">
+              <div class="pic-ct"></div>
+              <div class="txt-ct">
+                <h3 class="name-t-3">CAMILO RIVERA</h3>
+              </div>
+            </div>
+          </div>
+          <div class="recents-w">
+            <div class="rec-box">
+              <div class="pic-ct"></div>
+              <div class="txt-ct">
+                <h3 class="name-t-3">CAMILO RIVERA</h3>
+              </div>
+            </div>
+          </div>
           <?php $block = module_invoke('BRM_millerlite', 'block_view','social_icons');
             print render($block['content']); 
             ?>
+          <!--/-dashboard-->
         </div>
-      </div>
-      <div class="cont-dinamic">
-        <div class="cont-header">
-          <div class="menu-header">
-            <?php $menu = menu_navigation_links('main-menu');
-              print theme('links__menu_casabienestar', array('links' => $menu,'attributes' => array('class' => array('nav navbar-nav'))));
-            ?>
-          </div>
-          <div class="cont-login">
-            <?php $block = module_invoke('BRM_millerlite', 'block_view','user_login');
-            print render($block['content']); 
-            ?>
-          </div>
-          <div class="cont-searchs">
-            <a onclick="abrir_search()" style="cursor:pointer;">Buscar</a>
-          </div>
+      </article>
+      <article class="col-lg-10 col-md-12 col-sm-12 col-xs-12 fond-1">
+        <div class="header">
+          <!--header-->
+          <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display-->
+              
+              <!-- Collect the nav links, forms, and other content for toggling-->
+              <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+                               
+                <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                  <?php 
+                    $varMenu = menu_tree_all_data('main-menu');
+                    foreach ($varMenu as $key => $value) {
+                        $conSubMenu = count($value['below']);
+                        $tit = strtolower($value['link']['link_title']);
+                        $alias = drupal_get_path_alias($value['link']['link_path']);
+                        $alias2 = drupal_get_path_alias(arg(0)."/".arg(1));
+                        //var_dump($base_path.$alias2);
+                       ?>
+                      <?php if($tit == $alias2){ ?>
+                        <li class="dropdown active">
+                      <?php }else{ ?>
+                        <li class="dropdown">
+                      <?php }?>
+                      
+                        <a href="<?php print_r($base_path.$alias)?>" data-toggle="" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">
+                      <p class="men-task"><span class="icon-miller-<?php print_r($tit); ?> s-i"></span></p>
+                      <p class="men-task"><?php print_r($value['link']['link_title'])?>
+                        <?php if($conSubMenu > 0){ ?><span class="caret"></span> <?php } ?>
+                      </p></a>
+                      <?php
+                        
+                        if($conSubMenu > 0){ ?>
+                            <ul class="dropdown-menu">
+                              <?php 
+                                foreach ($value['below'] as $key => $value2) { ?>
+                                    <li><a href="<?php print_r($base_path.drupal_get_path_alias($value2['link']['link_path']))?>"><?php print_r($value2['link']['link_title'])?></a></li>
+                                    <li role="separator" class="divider"></li>
+                                <?php }
+                              ?>                        
+                      </ul>
+                        <?php } ?>
+
+                      
+                    </li>
+                    <?php 
+
+                  } 
+                ?> 
+                  
+                  
+                </ul>
+
+              </div>
+
+              </div>
+              <!-- /.navbar-collapse-->
+            </div>
+            <!-- /.container-fluid-->
+          </nav>
+          <!--header-->
         </div>
-        <div class="cont-rest-dinamic">
-          <h1><?php print $title; ?></h1>
+        <div class="headerItem-menu">
+              <h1><?php print $title; ?></h1>
+              <div class="submenu-dinamic">
+                <?php
+                    $auxmenu = drupal_get_path_alias(arg(0)."/".arg(1));
+                    $porciones = explode("/", $auxmenu);
+                    if(count($porciones)!=0){
+                      $menu = menu_navigation_links("menu-".$porciones[0]);
+                      print theme('links__menu_casabienestar', array('links' => $menu,'attributes' => array('class' => array('nav navbar-nav'))));
+                    }
+                ?>
+              </div>
+              <div class="submenu-dinamic-3">
+                <?php 
+                  if(count($porciones)>1){
+                    $menu = menu_navigation_links("menu-".$title);
+                    print theme('links__menu_casabienestar', array('links' => $menu,'attributes' => array('class' => array('nav navbar-nav'))));
+                  }
+                ?>
+              </div>
+          </div>
+        
            <?php if ($content = render($page['content'])): ?>
               <div id="content" class="region">
                 <?php print $content; ?>
               </div>
             <?php endif; ?>
+        <div class="db visible-xs visible-sm visible-md">
+          <!--dashboard-->
+          <div class="log-w">
+            <div class="pic-ct"></div>
+            <div class="txt-ct">
+              <p class="tit-log">HOLA</p>
+              <p class="name-t">CAMILO RIVERA</p>
+            </div>
+          </div>
+          <h4 class="pd-t">LO NUEVO   </h4>
+          <div class="feed-w">
+            <div class="ct-slide">
+              <div id="myCarousel-log" data-interval="5000" data-ride="carousel" class="carousel slide">
+                <!-- Carousel indicators-->
+                <ol class="carousel-indicators">
+                  <li data-target="#myCarousel-log" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel-log" data-slide-to="1"></li>
+                  <li data-target="#myCarousel-log" data-slide-to="2"></li>
+                </ol>
+                <!-- Wrapper for carousel items-->
+                <div class="carousel-inner">
+                  <div class="active item b-f">
+                    <div class="log-w-2">
+                      <div class="pic-ct-2"></div>
+                      <div class="txt-ct-2"> 
+                        <p class="name-t-2">CAMILO RIVERA</p>
+                        <p class="tit-log-2">Una mañana, tras un sueño intranquilo, Gregorio Samsa.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item b-f">
+                    <div class="log-w-2">
+                      <div class="pic-ct-2"></div>
+                      <div class="txt-ct-2">
+                        <p class="name-t-2">CAMILO RIVERA</p>
+                        <p class="tit-log-2">Una mañana, tras un sueño intranquilo, Gregorio Samsa.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item b-f">
+                    <div class="log-w-2">
+                      <div class="pic-ct-2"></div>
+                      <div class="txt-ct-2">
+                        <p class="name-t-2">CAMILO RIVERA</p>
+                        <p class="tit-log-2">Una mañana, tras un sueño intranquilo, Gregorio Samsa.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h4 class="rec-m">RECIENTES </h4>
+          <div class="recents-w">
+            <div class="rec-box">
+              <div class="pic-ct"></div>
+              <div class="txt-ct">
+                <h3 class="name-t-3">CAMILO RIVERA</h3>
+              </div>
+            </div>
+          </div>
+          <div class="recents-w">
+            <div class="rec-box">
+              <div class="pic-ct"></div>
+              <div class="txt-ct">
+                <h3 class="name-t-3">CAMILO RIVERA</h3>
+              </div>
+            </div>
+          </div>
+          <div class="recents-w">
+            <div class="rec-box">
+              <div class="pic-ct"></div>
+              <div class="txt-ct">
+                <h3 class="name-t-3">CAMILO RIVERA</h3>
+              </div>
+            </div>
+          </div>
+          <h4 class="rec-m">Síguenos en Nuestras Redes</h4>
+          <ul class="soc-links">
+            <li><a href="https://www.facebook.com/MillerLiteColombia/" alt="facebook Miller Lite" title="facebook Miller Lite"><span class="icon-miller-fb s-i-2"> </span></a></li>
+            <li><a href="https://twitter.com/MillerLiteCol?lang=es" alt="twitter Miller Lite" title="twitter Miller Lite"><span class="icon-miller-tw s-i-2"> </span></a></li>
+          </ul>
+          <!--/-dashboard-->
         </div>
-      </div>
+      </article>
     </div>
-    <div class="cont-footer">
-      <?php $block = module_invoke('BRM_millerlite', 'block_view','footer_miller');
+  </section>
+  <!--Footer-->
+  <?php $block = module_invoke('BRM_millerlite', 'block_view','footer_miller');
             print render($block['content']); 
-      ?>
-    </div>
-</div>
+  ?>
+  </div>
+  </div>
