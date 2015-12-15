@@ -237,22 +237,14 @@
         <div class="headerItem-menu">
               <h1><?php print $title; ?></h1>
               <div class="submenu-dinamic">
-                <?php
-                    $auxmenu = drupal_get_path_alias(arg(0)."/".arg(1));
-                    $porciones = explode("/", $auxmenu);
-                    if(count($porciones)!=0){
-                      $menu = menu_navigation_links("menu-".$porciones[0]);
-                      print theme('links__menu_casabienestar', array('links' => $menu,'attributes' => array('class' => array('nav navbar-nav'))));
-                    }
-                ?>
+                <?php if ($page['highlighted']) : ?>           
+                  <?php print render($page['highlighted']); ?>           
+                <?php endif; ?>
               </div>
               <div class="submenu-dinamic-3">
-                <?php 
-                  if(count($porciones)>1){
-                    $menu = menu_navigation_links("menu-".$title);
-                    print theme('links__menu_casabienestar', array('links' => $menu,'attributes' => array('class' => array('nav navbar-nav'))));
-                  }
-                ?>
+                <?php if ($page['content_aside']) : ?>           
+                  <?php print render($page['content_aside']); ?>           
+                <?php endif; ?>
               </div>
           </div>
         
