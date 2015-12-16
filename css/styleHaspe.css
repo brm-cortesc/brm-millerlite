@@ -152,7 +152,7 @@
 }
 
 .cont-playlist-mp3s{
-	display: none;
+	display: block;
 }
 
 #popup-ferias {

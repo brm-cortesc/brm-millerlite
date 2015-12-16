@@ -91,6 +91,7 @@
  * @see adaptivetheme_process_page()
  */
 ?>
+<?php global $base_url; ?>
 <div class="cont-ini-sesion">
   <a onclick="cerrar_login();" style="cursor:pointer;">X Cerrar</a>
   <?php $block = module_invoke('user', 'block_view','login');
@@ -176,9 +177,10 @@
           <nav class="navbar navbar-default">
             <div class="container-fluid">
               <!-- Brand and toggle get grouped for better mobile display-->
-              
+              <div class="navbar-header">
+                <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="<?php print_r($base_url); ?>" class="navbar-brand visible-xs visible-md"><img src="<?php print_r($base_url.'/sites/all/themes/millerLiteColTheme\css\svg\logo-miller-vc.svg');?>" alt="Miller Lite" title="Miller Lite" class="log"></a>
+              </div>
               <!-- Collect the nav links, forms, and other content for toggling-->
-              <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
                                
                 <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
@@ -190,8 +192,11 @@
                         $alias = drupal_get_path_alias($value['link']['link_path']);
                         $alias2 = drupal_get_path_alias(arg(0)."/".arg(1));
                         //var_dump($base_path.$alias2);
+                       ?><?php
+                       $arrays = explode("/", $alias2);
                        ?>
-                      <?php if($tit == $alias2){ ?>
+
+                      <?php if($tit == $arrays[0]){ ?>
                         <li class="dropdown active">
                       <?php }else{ ?>
                         <li class="dropdown">
@@ -227,7 +232,7 @@
 
               </div>
 
-              </div>
+
               <!-- /.navbar-collapse-->
             </div>
             <!-- /.container-fluid-->
@@ -235,6 +240,8 @@
           <!--header-->
         </div>
         <div class="headerItem-menu">
+          <!-- !Breadcrumbs -->
+          <?php if ($breadcrumb): print $breadcrumb; endif; ?>
               <h1><?php print $title; ?></h1>
               <div class="submenu-dinamic">
                 <?php if ($page['highlighted']) : ?>           
