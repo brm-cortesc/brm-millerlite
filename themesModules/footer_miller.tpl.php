@@ -4,7 +4,7 @@
       <article class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
         <p class="log-imt"><img src="<?php print_r($base_url.'/sites/all/themes/millerLiteColTheme\css\svg\its-miller-time.svg');?>" alt="Miller Lite" class="pd-log"></p>
       </article>
-      <article class="col-lg-10 col-md-10 col-sm-12 col-xs-12 ft-mob">
+      <article class="col-lg-8 col-md-8 col-sm-12 col-xs-12 ft-mob">
         <?php $menu = menu_navigation_links('menu-footer-menu');
 			     foreach ($menu as $key => $value) {
     				$aux = $key;
@@ -19,7 +19,7 @@
         ?>
       </article>
       <article class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-        <p class="log-imt"><a title="hablemos de alcohol" target="_blank" href="http://www.hablemosdealcohol.com"><img src="<?php print_r($base_url.'/sites/all/themes/millerLiteColTheme\css\svg\talking-alcohol-ml.svg');?>" alt="Miller Lite" class="pd-log"></a></p>
+        <p class="log-imt"><a title="hablemos de alcohol" target="_blank" href="http://www.hablemosdealcohol.com"><img src="<?php print_r($base_url.'/sites/all/themes/millerLiteColTheme\css\svg\talking-alcohol-ml.svg');?>" alt="Miller Lite" class="pd-log-2"></a></p>
       </article>
     </div>
   </footer>
