@@ -262,56 +262,12 @@
             <?php endif; ?>
         <div class="db visible-xs visible-sm visible-md">
           <!--dashboard-->
-          <div class="log-w">
-            <div class="pic-ct"></div>
-            <div class="txt-ct">
-              <p class="tit-log">HOLA</p>
-              <p class="name-t">CAMILO RIVERA</p>
-            </div>
-          </div>
-          <h4 class="pd-t">LO NUEVO   </h4>
-          <div class="feed-w">
-            <div class="ct-slide">
-              <div id="myCarousel-log" data-interval="5000" data-ride="carousel" class="carousel slide">
-                <!-- Carousel indicators-->
-                <ol class="carousel-indicators">
-                  <li data-target="#myCarousel-log" data-slide-to="0" class="active"></li>
-                  <li data-target="#myCarousel-log" data-slide-to="1"></li>
-                  <li data-target="#myCarousel-log" data-slide-to="2"></li>
-                </ol>
-                <!-- Wrapper for carousel items-->
-                <div class="carousel-inner">
-                  <div class="active item b-f">
-                    <div class="log-w-2">
-                      <div class="pic-ct-2"></div>
-                      <div class="txt-ct-2"> 
-                        <p class="name-t-2">CAMILO RIVERA</p>
-                        <p class="tit-log-2">Una mañana, tras un sueño intranquilo, Gregorio Samsa.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item b-f">
-                    <div class="log-w-2">
-                      <div class="pic-ct-2"></div>
-                      <div class="txt-ct-2">
-                        <p class="name-t-2">CAMILO RIVERA</p>
-                        <p class="tit-log-2">Una mañana, tras un sueño intranquilo, Gregorio Samsa.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item b-f">
-                    <div class="log-w-2">
-                      <div class="pic-ct-2"></div>
-                      <div class="txt-ct-2">
-                        <p class="name-t-2">CAMILO RIVERA</p>
-                        <p class="tit-log-2">Una mañana, tras un sueño intranquilo, Gregorio Samsa.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <?php $block = module_invoke('BRM_millerlite', 'block_view','user_module');
+            print render($block['content']); 
+            ?>
+            <?php $block = module_invoke('BRM_millerlite', 'block_view','slider_the_new');
+            print render($block['content']); 
+          ?>
           <h4 class="rec-m">RECIENTES </h4>
           <div class="recents-w">
             <div class="rec-box">
