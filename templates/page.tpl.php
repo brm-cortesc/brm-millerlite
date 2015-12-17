@@ -205,10 +205,10 @@
                         <a href="<?php print_r($base_path.$alias)?>" data-toggle="" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">
                       <p class="men-task"><span class="icon-miller-<?php print_r($tit); ?> s-i"></span></p>
                       <p class="men-task"><?php print_r($value['link']['link_title'])?>
-                        <?php if($conSubMenu > 0){ ?><span class="caret"></span> <?php } ?>
+                        <?php /* if($conSubMenu > 0){ ?><span class="caret"></span> <?php } */ ?>
                       </p></a>
                       <?php
-                        
+                        /*
                         if($conSubMenu > 0){ ?>
                             <ul class="dropdown-menu">
                               <?php 
@@ -218,7 +218,7 @@
                                 <?php }
                               ?>                        
                       </ul>
-                        <?php } ?>
+                        <?php }  */?>
 
                       
                     </li>
