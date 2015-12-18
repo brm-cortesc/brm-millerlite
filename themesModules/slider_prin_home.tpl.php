@@ -17,8 +17,8 @@
 					?>
 	                	<img width="100%" height="100%" src="<?php print $urlImage; ?>" alt="<?php print $value->field_imagen_slider['und'][0]['alt']; ?>" title="<?php print $value->field_imagen_slider['und'][0]['title']; ?>"/>
 						 <div class="carousel-caption">
-						 	<h3><?php print $value->title; ?></h3>
-						 	<p><?php print $value->field_resumen['und'][0]['value'] ?></p>
+						 	<h3 class="slid-tit"><?php print $value->title; ?></h3>
+						 	<p class="slid-txt"><?php print $value->field_resumen['und'][0]['value'] ?></p>
 		             </div>	
 		             </div>	
 			<?php $auxCo++; } ?>
