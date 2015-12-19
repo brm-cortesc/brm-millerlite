@@ -56,6 +56,11 @@ function adaptivetheme_subtheme_process_html(&$vars) {
 
 function millerLiteColTheme_preprocess_page(&$vars) {
 
+	if(arg(0)=="node" && arg(1)=="99"){
+		$vars['theme_hook_suggestions'][] = 'page__lived';
+
+	}
+
 	
 	
 	$header = drupal_get_http_header('status'); 

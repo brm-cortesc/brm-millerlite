@@ -91,6 +91,13 @@
  * @see adaptivetheme_process_page()
  */
 ?>
+
+<?php
+if(isset($page['content']['metatags'])){
+render($page['content']['metatags']);  
+}
+
+?>
 <?php global $base_url; ?>
 <div class="cont-ini-sesion">
   <a onclick="cerrar_login();" style="cursor:pointer;">X Cerrar</a>
@@ -116,10 +123,12 @@
       <article class="col-lg-2 col-md-2 col-sm-12 col-xs-12 pd-mm visible-sm visible-lg">
         <div class="bar-bl">
           <div class="logo-web">
-          <?php 
-            if ($site_logo):
-              print $site_logo; 
-            endif; ?>
+               <h1 class="logo">
+                  <?php 
+                    if ($site_logo):
+                      print $site_logo; 
+                    endif; ?>
+                </h1>
         </div>
           <ul class="nav navbar-nav navbar-right visible-sm busc2">
             <li class="visible-sm">
@@ -222,9 +231,7 @@
                     <?php 
 
                   } 
-                ?> 
-                  
-                  
+                ?>
                 </ul>
                 <?php $block = module_invoke('BRM_millerlite', 'block_view','user_login');
                   print render($block['content']); 

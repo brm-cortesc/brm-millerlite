@@ -34,7 +34,9 @@
                       </div>
                       <div class="txt-ct-2"> 
                         <p class="name-t-2"><?php print $value->title; ?></p>
+                        <?php if(isset($value->field_texto_promocional_lo_nuevo['und'][0]['value'])){ ?>
                         <p class="tit-log-2"><?php print $value->field_texto_promocional_lo_nuevo['und'][0]['value'];?></p>
+                        <?php } ?>
                       </div>
                     </div>
                   </a>

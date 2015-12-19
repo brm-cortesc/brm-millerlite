@@ -1,0 +1,495 @@
+@import 'variables.styl'
+@import 'inputs.styl'
+@import 'header.styl'
+
+// Estilos generales
+
+*
+	font-smoothing: antialiased;
+	font-smoothing: grayscale;
+
+body
+	font-size 16px
+	font-family 'roboto-r'
+	background-image: url(../images/ppl_bgi.png);
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	&.muse
+		background-image: url(../images/bgi_muse.jpg) !important;
+	&.pearl
+		background-image: url(../images/bgi_pearl.jpg) !important;
+
+h1
+h2
+	font-family 'akzidenzgrotesk'
+	color ml-lblue
+
+h3
+	font-family 'roboto-r'
+	color ml-lblue
+	
+h4
+h5
+	font-family 'roboto-r'
+	color ml-lblue
+
+p
+	font-family 'roboto-r'
+	color gris-grl-font
+
+h6
+	font-family 'roboto-r'
+	color gris-grl-font
+
+hr
+	border-color ml-mblue
+	width 80%
+	&.darker
+		border-color ml-mblue !important
+		width 100% !important	
+		padding 0 !important
+		margin 0 0 0.3em 0 !important
+		
+ol
+	li
+		margin 0.3em 0
+	
+header
+	background-color rgba(ml-hdblue, 0.7)
+	width 100%
+	min-height 5em
+	z-index 50
+	box-shadow: 0 0 0.5em rgba(ml-hdblue, 0.8);
+	
+// Estilos del validador de edad
+
+.logo-cont
+	position absolute
+	background-color ml-dblue
+	padding 2.5em 0.5em
+	z-index 15
+	img
+		width 100%
+	
+.logo-sounds-cont
+	padding 1em
+	img
+		width 100%
+		
+.load-bar
+	background: linear-gradient(left, ml-mblue, ml-lblue);
+	height 2em
+	width 72%
+	text-align right
+	padding-right 1em
+	z-index 10
+	span
+		color white
+		font-family 'akzidenzgrotesk'
+		font-size 1.5em
+
+.gral-cont
+	margin-top 2.5em
+
+.gral-white-cont
+	background-color rgba(white, 0.7)
+	margin-top 2em
+	box-shadow: 3px 3px 0 rgba(black, 0.18);
+	padding 0.1em 1em
+
+.gral-blue-cont
+	background-color ml-dblue
+	margin-top 2em
+	box-shadow: 3px 3px 0 rgba(black, 0.18);
+	padding 0.1em 1em 0 0
+	
+.lata-cont
+	text-align center
+	img 
+		width 62%
+		margin 0 auto
+
+// Estilos del home
+
+.logo-red-cont
+	margin-top 12em
+	img
+		width 100%
+
+.home-links
+	padding 2em
+	img
+		width 100%
+
+.breadcrumbs
+	border-bottom solid 1px gris-grl-font
+	color gris-grl-font
+	margin-top 0.5em
+	&.light
+		color white !important
+		border-bottom solid 1px white !important
+		a
+			color white
+			font-family 'roboto-r'
+			&:hover
+			&:active
+			&:focus
+			&:visited
+				color white
+				text-decoration none
+	a
+		color gris-grl-font
+		font-family 'roboto-r'
+		&:hover
+		&:active
+		&:focus
+		&:visited
+			color gris-grl-font
+			text-decoration none
+
+.logo-its
+	margin 2em 0
+	text-align center
+
+// Estilos lite tributes
+
+.img-section
+	img
+		border-top 1px solid ml-sblue
+		margin-top 2em
+		position absolute
+		left 0
+
+.video-cont
+.map-cont
+	height 0
+	overflow hidden
+	padding-bottom 56.25%
+	padding-top 30px
+	position relative
+	margin 1em 0
+
+.video-cont iframe
+.map-cont iframe
+.video-cont object
+.video-cont embed
+.video-cont video
+	height 100%
+	left 0
+	position absolute
+	top 0
+	width 100%
+
+.city
+	background-color ml-dblue
+	color white
+	padding 0.2em
+	margin 0.1em 0
+	font-family 'akzidenzgrotesk'
+	font-size 1.5em
+	text-transform uppercase
+	height 1.8em
+
+.event
+	background-color ml-sblue
+	color ml-lblue
+	padding 0.2em
+	margin 0.2em 0
+	font-family 'roboto-r'
+	font-size 0.9em
+	text-transform uppercase
+	height 3em
+
+.img-news
+	margin 0.4em 0
+	img
+		width 100%
+		border-bottom 3px solid ml-red
+
+.cont-news
+	margin 0.1em 0
+	h3
+		padding 0
+		margin 0 
+
+.link-news
+	background-color transparent
+	font-family 'roboto-r'
+	text-decoration underline
+	color ml-red
+	text-transform uppercase
+	font-size 0.8em
+
+// estilos de inscripción de bandas
+
+.steps
+	float right 
+	color ml-red
+
+.img-cont
+	padding 0
+	margin-top 1em
+	img
+		width 100%
+
+.share-cont
+	.share-label
+		font-size 1.2em
+		margin-right 0.5em
+
+// Estilos de la pagina de votos
+
+.vote-count
+	.label-votes
+		font-family 'roboto-r'
+		color gris-link-font 
+		font-size 1em
+		vertical-align top
+		line-height 3.3em
+	.votos
+		font-size 3.5em
+		font-family 'akzidenzgrotesk'
+		color ml-lblue
+	
+.scroll-cont
+	max-height 31em
+	overflow-y scroll
+	
+.scroll-cont-capsulas
+	max-height 25.5em
+	overflow-y scroll
+
+.band-info-cont
+	margin-top 0.5em
+	margin-bottom 0.5em
+	.img-video-cont
+		img
+			width 100%
+	.video-info
+		vertical-align top
+		h5
+			margin 0
+		.cover-info
+			font-family 'robotothin'
+			color gris-grl-font
+			display block
+
+// Estilos para modales
+
+.modal-content
+	background-color ml-red
+	border-radius: 0 !important;
+.modal-header
+	border-radius: 0 !important;
+	position relative
+	border none
+	.close
+		position absolute
+		background-color ml-mblue
+		border-radius: 0 !important;
+		opacity: 1 !important;
+		color white
+		padding 0.5em
+		right -0.5em
+		top -0.5em
+	.modal-title
+		font-family 'akzidenzgrotesk'
+		color white
+		font-size 4em
+		line-height 1em
+		text-align center
+	
+.modal-body
+	text-align center
+	font-size 2em
+	color white !important
+	
+.modal-footer
+	border none
+	text-align center
+	text-align center
+
+// Estilos para las bandas
+
+.flyer-img-cont
+	img
+		width 100%
+
+.win-tickets-cont
+	background-color ml-lblue
+	min-height 5em
+	padding 0.1em 1em
+	
+// Estilos del footer
+
+footer
+	padding 0.5em
+	background-color ml-dblue
+	bottom 0
+	width 100%
+	min-height 2em
+	ul
+		color #80c3ff
+		font-size 0.8em
+		li
+			list-style none 
+			display inline-block
+			margin-right 0.2em
+			&:after
+				content '|'
+				margin-left 0.5em
+			a
+				color #80c3ff
+				&:hover
+				&:visited
+				&:focus
+				&:active
+					color #80c3ff
+					text-decoration none 
+	span
+		color white
+		font-size 0.6em
+		a
+			img
+				height 2.5em
+				
+// oocss
+
+.minus1_5
+	margin-top -1.5em
+
+.red
+	color ml-red
+
+.dis-block
+	display block
+
+.lright
+	border-right 1px solid ml-mblue
+
+.pad0
+	padding 0 !important
+
+.light-font
+	color white !important
+
+// Media querys
+
+@media (min-width: 200px) and (max-width: 767px)
+	
+	header
+		background-color transparent
+		width 100%
+		min-height 5em
+		z-index 50
+		box-shadow: none;
+
+	.logo-cont
+		position relative
+		background-color transparent
+		padding 0.5em
+		img
+			width 100%
+		
+	.logo-sounds-cont
+		padding 0.5em
+		img
+			width 100%
+	
+	.lata-cont
+		img 
+			width 80%
+	
+	.gral-cont
+		margin-top 0
+		
+	.logo-its
+		margin 2em 0
+		
+	.gral-blue-cont
+		padding 1em
+			
+	footer
+		position relative
+		text-align center
+		ul
+			color #80c3ff
+			font-size 0.8em
+		span
+			color white
+			font-size 0.7em
+			a
+				display block
+				img
+					height 2.5em
+	
+	// Estilos del home
+
+	.logo-red-cont
+		margin-top 12em
+		img
+			width 100%
+
+	.home-links
+		padding 1em
+		img
+			width 100%
+			
+	// oocss
+
+	.minus1_5
+		margin-top 1em
+	
+	.lright
+		border-right none
+
+@media (min-width: 768px) and (max-width: 991px)
+	
+	header
+		background-color transparent
+		width 100%
+		min-height 5em
+		z-index 50
+		box-shadow: none;
+	
+	.logo-cont
+		position relative
+		background-color transparent
+		padding 0.5em
+		img
+			width 100%
+		
+	.logo-sounds-cont
+		padding 0.5em
+		img
+			width 100%
+	
+	.gral-cont
+		margin-top 2em
+	
+	.logo-its
+		margin 2em 0
+	
+	.gral-blue-cont
+		padding 1em
+	
+	footer
+		position relative
+		text-align center
+		ul
+			color #80c3ff
+			font-size 0.8em
+		span
+			color white
+			font-size 0.7em
+			a
+				display block
+				img
+					height 2.5em
+
+@media (min-width: 992px) and (max-width: 1199px)
+
+	body
+		background-color gray
