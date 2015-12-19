@@ -227,9 +227,17 @@
           </div>
         <div class="headerItem-menu">
           <!-- !Breadcrumbs -->
-          <?php if ($breadcrumb): print $breadcrumb; endif; ?>
+          <?php /*if ($breadcrumb): print $breadcrumb; endif;*/ ?>
+          <?php 
+            if($breadcrumb){
+                print $breadcrumb;
+            }else{ ?>
+                <nav class="breadcrumb-wrapper clearfix" role="navigation" aria-labelledby="breadcrumb-label"><ol id="crumbs" class="clearfix breadcrumb style-sm"><li class="crumb crumb-first"><span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" class="ts-o"><?php print $title; ?></a></span></li><li class="crumb crumb-last"><span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" class="ts-o"></a></span></li></ol></nav>
+            <?php }
+          ?>
 
-              <h1 class="tituloInterno"><?php print $title; ?></h1>
+
+              <h2 class="tituloInterno"><?php print $title; ?></h2>
               <div class="submenu-dinamic">
                 
                 <?php if ($page['highlighted']) : ?>           
