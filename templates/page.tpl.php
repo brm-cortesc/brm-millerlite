@@ -116,10 +116,12 @@
       <article class="col-lg-2 col-md-2 col-sm-12 col-xs-12 pd-mm visible-sm visible-lg">
         <div class="bar-bl">
           <div class="logo-web">
-          <?php 
-            if ($site_logo):
-              print $site_logo; 
-            endif; ?>
+             <h2 class="logo">
+                <?php 
+                  if ($site_logo):
+                    print $site_logo; 
+                  endif; ?>
+              </h2>
         </div>
           <ul class="nav navbar-nav navbar-right visible-sm busc2">
             <li class="visible-sm">
@@ -239,9 +241,16 @@
           </nav>
           <!--header-->
         </div>
+        <div class="db visible-xs visible-sm visible-md">
+          <!--dashboard-->
+          <?php $block = module_invoke('BRM_millerlite', 'block_view','user_module');
+            print render($block['content']); 
+            ?>
+          </div>
         <div class="headerItem-menu">
           <!-- !Breadcrumbs -->
           <?php if ($breadcrumb): print $breadcrumb; endif; ?>
+
               <h1><?php print $title; ?></h1>
               <div class="submenu-dinamic">
                 <?php if ($page['highlighted']) : ?>           
@@ -262,9 +271,6 @@
             <?php endif; ?>
         <div class="db visible-xs visible-sm visible-md">
           <!--dashboard-->
-          <?php $block = module_invoke('BRM_millerlite', 'block_view','user_module');
-            print render($block['content']); 
-            ?>
             <?php $block = module_invoke('BRM_millerlite', 'block_view','slider_the_new');
             print render($block['content']); 
           ?>
