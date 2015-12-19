@@ -229,7 +229,7 @@
           <!-- !Breadcrumbs -->
           <?php if ($breadcrumb): print $breadcrumb; endif; ?>
 
-              <h1><?php print $title; ?></h1>
+              <h1 class="tituloInterno"><?php print $title; ?></h1>
               <div class="submenu-dinamic">
                 
                 <?php if ($page['highlighted']) : ?>           

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-Holaaaaa
-=======
 <h4 class="rec-m">RECIENTES </h4>
                     <?php
           	foreach ($variables['nodes_slider'] as $key => $value) { ?>
@@ -16,4 +13,3 @@ Holaaaaa
 
           	<?php }
           ?>
->>>>>>> 795edbfa5e12ef68a684b28608a290bb55716261
