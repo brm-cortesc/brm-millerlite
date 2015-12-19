@@ -91,6 +91,13 @@
  * @see adaptivetheme_process_page()
  */
 ?>
+
+<?php
+if(isset($page['content']['metatags'])){
+render($page['content']['metatags']);  
+}
+
+?>
 <?php global $base_url; ?>
 <div class="cont-ini-sesion">
   <a onclick="cerrar_login();" style="cursor:pointer;">X Cerrar</a>
@@ -116,10 +123,12 @@
       <article class="col-lg-2 col-md-2 col-sm-12 col-xs-12 pd-mm visible-sm visible-lg">
         <div class="bar-bl">
           <div class="logo-web">
-          <?php 
-            if ($site_logo):
-              print $site_logo; 
-            endif; ?>
+               <h1 class="logo">
+                  <?php 
+                    if ($site_logo):
+                      print $site_logo; 
+                    endif; ?>
+                </h1>
         </div>
           <ul class="nav navbar-nav navbar-right visible-sm busc2">
             <li class="visible-sm">
@@ -140,31 +149,10 @@
             <?php $block = module_invoke('BRM_millerlite', 'block_view','slider_the_new');
             print render($block['content']); 
           ?>
-          <h4 class="rec-m">RECIENTES </h4>
-          <div class="recents-w">
-            <div class="rec-box">
-              <div class="pic-ct"></div>
-              <div class="txt-ct">
-                <h3 class="name-t-3">CAMILO RIVERA</h3>
-              </div>
-            </div>
-          </div>
-          <div class="recents-w">
-            <div class="rec-box">
-              <div class="pic-ct"></div>
-              <div class="txt-ct">
-                <h3 class="name-t-3">CAMILO RIVERA</h3>
-              </div>
-            </div>
-          </div>
-          <div class="recents-w">
-            <div class="rec-box">
-              <div class="pic-ct"></div>
-              <div class="txt-ct">
-                <h3 class="name-t-3">CAMILO RIVERA</h3>
-              </div>
-            </div>
-          </div>
+          
+          <?php $block = module_invoke('BRM_millerlite', 'block_view','recientes_home');
+            print render($block['content']); 
+            ?>
           <?php $block = module_invoke('BRM_millerlite', 'block_view','social_icons');
             print render($block['content']); 
             ?>
@@ -222,9 +210,7 @@
                     <?php 
 
                   } 
-                ?> 
-                  
-                  
+                ?>
                 </ul>
                 <?php $block = module_invoke('BRM_millerlite', 'block_view','user_login');
                   print render($block['content']); 
@@ -251,31 +237,9 @@
             <?php $block = module_invoke('BRM_millerlite', 'block_view','slider_the_new');
             print render($block['content']); 
             ?>
-          <h4 class="rec-m">RECIENTES </h4>
-          <div class="recents-w">
-            <div class="rec-box">
-              <div class="pic-ct"></div>
-              <div class="txt-ct">
-                <h3 class="name-t-3">CAMILO RIVERA</h3>
-              </div>
-            </div>
-          </div>
-          <div class="recents-w">
-            <div class="rec-box">
-              <div class="pic-ct"></div>
-              <div class="txt-ct">
-                <h3 class="name-t-3">CAMILO RIVERA</h3>
-              </div>
-            </div>
-          </div>
-          <div class="recents-w">
-            <div class="rec-box">
-              <div class="pic-ct"></div>
-              <div class="txt-ct">
-                <h3 class="name-t-3">CAMILO RIVERA</h3>
-              </div>
-            </div>
-          </div>
+           <?php $block = module_invoke('BRM_millerlite', 'block_view','recientes_hom');
+            print render($block['content']); 
+            ?>
           <h4 class="rec-m">Síguenos en Nuestras Redes</h4>
           <ul class="soc-links">
             <li><a href="https://www.facebook.com/MillerLiteColombia/" alt="facebook Miller Lite" title="facebook Miller Lite"><span class="icon-miller-fb s-i-2"> </span></a></li>

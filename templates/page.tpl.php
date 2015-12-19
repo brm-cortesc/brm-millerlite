@@ -116,10 +116,12 @@
       <article class="col-lg-2 col-md-2 col-sm-12 col-xs-12 pd-mm visible-sm visible-lg">
         <div class="bar-bl">
           <div class="logo-web">
-          <?php 
-            if ($site_logo):
-              print $site_logo; 
-            endif; ?>
+             <h2 class="logo">
+                <?php 
+                  if ($site_logo):
+                    print $site_logo; 
+                  endif; ?>
+              </h2>
         </div>
           <ul class="nav navbar-nav navbar-right visible-sm busc2">
             <li class="visible-sm">
@@ -140,31 +142,9 @@
             <?php $block = module_invoke('BRM_millerlite', 'block_view','slider_the_new');
             print render($block['content']); 
           ?>
-          <h4 class="rec-m">RECIENTES </h4>
-          <div class="recents-w">
-            <div class="rec-box">
-              <div class="pic-ct"></div>
-              <div class="txt-ct">
-                <h3 class="name-t-3">CAMILO RIVERA</h3>
-              </div>
-            </div>
-          </div>
-          <div class="recents-w">
-            <div class="rec-box">
-              <div class="pic-ct"></div>
-              <div class="txt-ct">
-                <h3 class="name-t-3">CAMILO RIVERA</h3>
-              </div>
-            </div>
-          </div>
-          <div class="recents-w">
-            <div class="rec-box">
-              <div class="pic-ct"></div>
-              <div class="txt-ct">
-                <h3 class="name-t-3">CAMILO RIVERA</h3>
-              </div>
-            </div>
-          </div>
+          <?php $block = module_invoke('BRM_millerlite', 'block_view','recientes_home');
+            print render($block['content']); 
+            ?>
           <?php $block = module_invoke('BRM_millerlite', 'block_view','social_icons');
             print render($block['content']); 
             ?>
@@ -238,20 +218,36 @@
           </nav>
           <!--header-->
         </div>
+        <div class="db visible-xs visible-sm visible-md">
+          <!--dashboard-->
+          <?php $block = module_invoke('BRM_millerlite', 'block_view','user_module');
+            print render($block['content']); 
+            ?>
+          </div>
         <div class="headerItem-menu">
           <!-- !Breadcrumbs -->
-          <?php if ($breadcrumb): print $breadcrumb; endif; ?>
-              <h1><?php print $title; ?></h1>
+          <?php /*if ($breadcrumb): print $breadcrumb; endif;*/ ?>
+          <?php 
+            if($breadcrumb){
+                print $breadcrumb;
+            }else{ ?>
+                <nav class="breadcrumb-wrapper clearfix" role="navigation" aria-labelledby="breadcrumb-label"><ol id="crumbs" class="clearfix breadcrumb style-sm"><li class="crumb crumb-first"><span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" class="ts-o"><?php print $title; ?></a></span></li><li class="crumb crumb-last"><span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" class="ts-o"></a></span></li></ol></nav>
+            <?php }
+          ?>
+
+
+              <h2 class="tituloInterno"><?php print $title; ?></h2>
               <div class="submenu-dinamic">
+                
                 <?php if ($page['highlighted']) : ?>           
                   <?php print render($page['highlighted']); ?>           
                 <?php endif; ?>
               </div>
-              <div class="submenu-dinamic-3">
+              <!-- <div class="submenu-dinamic-3">
                 <?php if ($page['content_aside']) : ?>           
                   <?php print render($page['content_aside']); ?>           
                 <?php endif; ?>
-              </div>
+              </div> -->
           </div>
         
            <?php if ($content = render($page['content'])): ?>
@@ -261,37 +257,12 @@
             <?php endif; ?>
         <div class="db visible-xs visible-sm visible-md">
           <!--dashboard-->
-          <?php $block = module_invoke('BRM_millerlite', 'block_view','user_module');
-            print render($block['content']); 
-            ?>
             <?php $block = module_invoke('BRM_millerlite', 'block_view','slider_the_new');
             print render($block['content']); 
           ?>
-          <h4 class="rec-m">RECIENTES </h4>
-          <div class="recents-w">
-            <div class="rec-box">
-              <div class="pic-ct"></div>
-              <div class="txt-ct">
-                <h3 class="name-t-3">CAMILO RIVERA</h3>
-              </div>
-            </div>
-          </div>
-          <div class="recents-w">
-            <div class="rec-box">
-              <div class="pic-ct"></div>
-              <div class="txt-ct">
-                <h3 class="name-t-3">CAMILO RIVERA</h3>
-              </div>
-            </div>
-          </div>
-          <div class="recents-w">
-            <div class="rec-box">
-              <div class="pic-ct"></div>
-              <div class="txt-ct">
-                <h3 class="name-t-3">CAMILO RIVERA</h3>
-              </div>
-            </div>
-          </div>
+          <?php $block = module_invoke('BRM_millerlite', 'block_view','recientes_home');
+            print render($block['content']); 
+            ?>
           <h4 class="rec-m">Síguenos en Nuestras Redes</h4>
           <ul class="soc-links">
             <li><a href="https://www.facebook.com/MillerLiteColombia/" alt="facebook Miller Lite" title="facebook Miller Lite"><span class="icon-miller-fb s-i-2"> </span></a></li>
