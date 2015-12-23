@@ -1,6 +1,6 @@
 <div class="col-lg-2 col-md-3 col-sm-12 col-xs-12 p-center">
     <div class="row">
-      <div class="col-xs-12 col-sm-3">
+      <div class="col-xs-12 col-sm-3 forma-1">
         	<?php 
 	if(isset($variables['userLoging']) && $variables['userLoging']==0){
 	?>
@@ -12,7 +12,7 @@
 	    print render($block['content']); 
 	} ?>
       </div>
-      <div class="col-xs-12 col-sm-9 visible-lg visible-md">
+      <div class="col-xs-12 col-sm-9 forma-1 visible-lg visible-md">
         <?php $block = module_invoke('search', 'block_view','form');
                   print render($block['content']); 
                   ?>
