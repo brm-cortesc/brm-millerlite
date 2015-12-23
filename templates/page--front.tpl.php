@@ -105,45 +105,58 @@ render($page['content']['metatags']);
     print render($block['content']); 
   ?>
 </div>
-<div class="cont-search">
-  <a onclick="cerrar_search();" style="cursor:pointer;">X Cerrar</a>
-  
-</div>
-<div id="page-wrapper">
-  <div id="page" class="<?php print $classes; ?>">
-    
-
 <div class="container-fluid">
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"></div>
     </div>
   </div>
   <section class="container-fluid">
-    <div class="row bg-1">
-      <article class="col-lg-2 col-md-2 col-sm-12 col-xs-12 pd-mm visible-sm visible-lg">
-        <div class="bar-bl">
-          <div class="logo-web">
-               <h1 class="logo">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bg-men">
+        <!--s-Menu-->
+        <section class="container-fluid bg-men-2">
+          <div class="row">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+              <div class="navbar navbar-default navbar-default-but"> 
+                <button type="button" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+              </div>
+            </div>
+            <div class="col-lg-8 col-md-7 col-sm-10 col-xs-10">
+              
+                <h1 class="p-cent-log">
                   <?php 
                     if ($site_logo):
                       print $site_logo; 
                     endif; ?>
                 </h1>
-        </div>
-          <ul class="nav navbar-nav navbar-right visible-sm busc2">
-            <li class="visible-sm">
-              <form role="search" class="navbar-form navbar-left">
+              
+            </div>
+            <?php $block = module_invoke('BRM_millerlite', 'block_view','user_login');
+                  print render($block['content']); 
+                  ?>
+          </div>
+        </section>
+        <!--/s-Menu-->
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bg-men">
+        <!--Menu-->
+        <div class="navmenu navmenu-default navmenu-fixed-left offcanvas">
+          <ul class="nav navmenu-nav visible-xs visible-sm visible-md">
+            <li><a href="../navmenu/"><span class="icon-miller-home s-i"></span>  HOME</a></li>
+            <li class="active"><a href="./"> <span class="icon-miller-miller s-i"></span> MILLER LITE </a></li>
+            <li><a href="../navmenu-reveal/"> <span class="icon-miller-music s-i"></span> MUSIC</a></li>
+            <li><a href="../navbar-offcanvas/"> <span class="icon-miller-litestyle s-i"></span> LITESTYLE</a></li>
+            <li><a href="../navbar-offcanvas/"> <span class="icon-miller-beertime s-i"></span>  BEERTIME</a>
+              <div role="search" class="navbar-form navbar-left">
                 <div class="form-group">
-                  <input type="text" placeholder="Buscar" class="form-control">
-                  <button type="submit" class="btn btn-default"> </button><span class="icon-miller-search s-i"></span>
+                  <input type="text" placeholder="Search" class="form-control">
+                  <button type="submit" class="btn btn-default">Submit</button>
                 </div>
-              </form>
+              </div>
             </li>
           </ul>
-        </div>
-        <div class="db visible-lg">
           <!--dashboard-->
-            <?php $block = module_invoke('BRM_millerlite', 'block_view','user_module');
+          <?php $block = module_invoke('BRM_millerlite', 'block_view','user_module');
             print render($block['content']); 
             ?>
             <?php $block = module_invoke('BRM_millerlite', 'block_view','slider_the_new');
@@ -158,103 +171,73 @@ render($page['content']['metatags']);
             ?>
           <!--/-dashboard-->
         </div>
-      </article>
-      <article class="col-lg-10 col-md-12 col-sm-12 col-xs-12 fond-1">
-        <div class="header">
-          <!--header-->
-          <nav class="navbar navbar-default">
-            <div class="container-fluid">
-              <!-- Brand and toggle get grouped for better mobile display-->
-              <div class="navbar-header">
-                <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="<?php print_r($base_url); ?>" class="navbar-brand visible-xs visible-md"><img src="<?php print_r($base_url.'/sites/all/themes/millerLiteColTheme\css\svg\logo-miller-vc.svg');?>" alt="Miller Lite" title="Miller Lite" class="log"></a>
-              </div>
-              <!-- Collect the nav links, forms, and other content for toggling-->
-                               
-                <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                  <?php 
-                    $varMenu = menu_tree_all_data('main-menu');
-                    foreach ($varMenu as $key => $value) {
-                        $conSubMenu = count($value['below']);
-                        $tit = strtolower($value['link']['link_title']);
-                        $alias = drupal_get_path_alias($value['link']['link_path']);
-                        $alias2 = drupal_get_path_alias(arg(0)."/".arg(1));
-
-                       ?>
-                      <?php if($tit == 'home' && $alias2 == 'node/'  ){ ?>
-                        <li class="dropdown active">
-                      <?php }else{ ?>
-                        <li class="dropdown">
-                      <?php }?>
-                      
-                        <a href="<?php print_r($alias)?>" data-toggle="" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">
-                      <p class="men-task"><span class="icon-miller-<?php print_r($tit); ?> s-i"></span></p>
-                      <p class="men-task"><?php print_r($value['link']['link_title'])?>
-                        <?php /* if($conSubMenu > 0){ ?><span class="caret"></span> <?php } */ ?>
-                      </p></a>
-                      <?php
-                        /*
-                        if($conSubMenu > 0){ ?>
-                            <ul class="dropdown-menu">
-                              <?php 
-                                foreach ($value['below'] as $key => $value2) { ?>
-                                    <li><a href="<?php print_r(drupal_get_path_alias($value2['link']['link_path']))?>"><?php print_r($value2['link']['link_title'])?></a></li>
-                                    <li role="separator" class="divider"></li>
-                                <?php }
-                              ?>                        
-                      </ul>
-                        <?php } */?>
-
-                      
+        <!--/Menu-->
+      </div>
+    </div>
+    <div class="row bg-men-3 visible-lg visible-sm">
+      <div class="col-lg-offset-3 col-lg-6 col-md-10 col-sm-10 col-xs-12">
+        <!--Sub-Menu-->
+        <ul class="nav nav-pills visible-lg">
+          <?php 
+            $varMenu = menu_tree_all_data('main-menu');
+              foreach ($varMenu as $key => $value) {
+                $conSubMenu = count($value['below']);
+                $tit = strtolower($value['link']['link_title']);
+                $alias = drupal_get_path_alias($value['link']['link_path']);
+                $alias2 = drupal_get_path_alias(arg(0)."/".arg(1));
+                if($tit == 'home' && $alias2 == 'node/'  ){ ?>
+                  <li class="active">
+                <?php }else{ ?>
+                  <li class="">
+                <?php }?>
+                      <a href="<?php print_r($alias)?>">
+                        <span class="icon-miller-<?php print_r($tit); ?> s-i"></span><?php print_r($value['link']['link_title'])?>
+                      </a>                      
                     </li>
                     <?php 
-
                   } 
                 ?>
-                </ul>
-                <?php $block = module_invoke('BRM_millerlite', 'block_view','user_login');
-                  print render($block['content']); 
-                  ?>
-              </div>
-
-
-              <!-- /.navbar-collapse-->
-            </div>
-            <!-- /.container-fluid-->
-          </nav>
-          <!--header-->
-        </div>
-        <?php print $messages; ?>
+        </ul>
+        <!--/Sub-Menu-->
+      </div>
+      <div class="col-lg-3 col-md-1 col-sm-1 col-xs-12"></div>
+    </div>
+  </section>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="">
+<?php print $messages; ?>
           <?php print render($page['help']); ?>
           <?php $block = module_invoke('BRM_millerlite', 'block_view','slider_prin_home');
             print render($block['content']); 
           ?>
-        <div class="db visible-xs visible-sm visible-md">
-          <!--dashboard-->
-           <?php $block = module_invoke('BRM_millerlite', 'block_view','user_module');
-            print render($block['content']); 
-            ?>
-            <?php $block = module_invoke('BRM_millerlite', 'block_view','slider_the_new');
-            print render($block['content']); 
-            ?>
-           <?php $block = module_invoke('BRM_millerlite', 'block_view','recientes_hom');
-            print render($block['content']); 
-            ?>
-          <h4 class="rec-m">Síguenos en Nuestras Redes</h4>
-          <ul class="soc-links">
-            <li><a href="https://www.facebook.com/MillerLiteColombia/" alt="facebook Miller Lite" title="facebook Miller Lite"><span class="icon-miller-fb s-i-2"> </span></a></li>
-            <li><a href="https://twitter.com/MillerLiteCol?lang=es" alt="twitter Miller Lite" title="twitter Miller Lite"><span class="icon-miller-tw s-i-2"> </span></a></li>
-          </ul>
-          <!--/-dashboard-->
-        </div>
+      </div>
+    </div>
+  </div>
+  <!--Footer-->
+  <footer class="navbar navbar-default navbar-fixed-bottom del-ft">
+    <div class="container-fluid">
+      <article class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+        <p class="log-imt"><img src="svg/its-miller-time.svg" alt="Miller Lite" class="pd-log"></p>
+      </article>
+      <article class="col-lg-10 col-md-10 col-sm-12 col-xs-12 ft-mob">
+        <ul class="list-bl">
+          <li><a href="#" title="">· Preguntas Frecuentes </a></li>
+          <li><a href="#" title="">· Contáctenos </a></li>
+          <li><a href="#" title="">· Encuentranos </a></li>
+          <li><a href="#" title="">· Consumo Responsable </a></li>
+          <li><a href="#" title="">· Mapa del Sitio </a></li>
+          <li><a href="#" title="">· Politica de Privacidad </a></li>
+          <li><a href="#" title="">· Términos de eso </a></li>
+          <li class="navbar-right pd-gen-ta">
+            <ul class="leg-bar">
+              <li>
+                <p class="leg-txt">Prohíbese el expendio de bebidas embriagantes a menores de edad.<br> El exceso de alcohol es perjudicial para la salud.</p>
+              </li>
+              <li class="pd-ta"><a href="#"><img src="svg/talking-alcohol-ml.svg" alt="Miller Lite" class="pd-dir"></a></li>
+            </ul>
+          </li>
+        </ul>
       </article>
     </div>
-  </section>
-  <!--Footer-->
-  <?php $block = module_invoke('BRM_millerlite', 'block_view','footer_miller');
-            print render($block['content']); 
-  ?>
-  </div>
-  </div>
-  
-
+  </footer>

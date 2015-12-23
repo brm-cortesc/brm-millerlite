@@ -1,5 +1,5 @@
 <div class="pic-container color">
-          <div id="myCarousel" class="carousel slide">
+          <div id="myCarousel" class="carousel slide" data-interval="6000">
             <ol class="carousel-indicators">
               <?php
               	$aux = 0;
