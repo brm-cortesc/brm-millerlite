@@ -9,5 +9,8 @@
 		$block = module_invoke('user', 'block_view','login');
 	    print render($block['content']); 
 	} ?>
+	<div class="visible-lg visible-md"><?php $block = module_invoke('search', 'block_view','form');
+                  print render($block['content']); 
+                  ?></div>
 </div>
 

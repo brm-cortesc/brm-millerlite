@@ -29,7 +29,7 @@
 						 <div class="carousel-caption">
 						 	<h3 class="slid-tit"><?php print $value->title; ?></h3>
 						 	<?php if(isset($value->field_resumen['und'][0]['value'])){ ?>
-						 		<p class="slid-txt"><?php print $value->field_resumen['und'][0]['value'] ?></p>
+						 		<p class="slid-txt"><?php /*print $value->field_resumen['und'][0]['value'] */?></p>
 						 	<?php } ?>
 						 	<?php if(isset($value->field_url_redireccion['und'][0]['value'])){ ?>
 						 		<a href="<?php print_r($value->field_url_redireccion['und'][0]['value']);?>"><button type="button" class="btn btn-default btn-lg btn-block">Ver más</button></a>

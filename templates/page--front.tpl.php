@@ -142,18 +142,28 @@ render($page['content']['metatags']);
         <!--Menu-->
         <div class="navmenu navmenu-default navmenu-fixed-left offcanvas">
           <ul class="nav navmenu-nav visible-xs visible-sm visible-md">
-            <li><a href="../navmenu/"><span class="icon-miller-home s-i"></span>  HOME</a></li>
-            <li class="active"><a href="./"> <span class="icon-miller-miller s-i"></span> MILLER LITE </a></li>
-            <li><a href="../navmenu-reveal/"> <span class="icon-miller-music s-i"></span> MUSIC</a></li>
-            <li><a href="../navbar-offcanvas/"> <span class="icon-miller-litestyle s-i"></span> LITESTYLE</a></li>
-            <li><a href="../navbar-offcanvas/"> <span class="icon-miller-beertime s-i"></span>  BEERTIME</a>
-              <div role="search" class="navbar-form navbar-left">
-                <div class="form-group">
-                  <input type="text" placeholder="Search" class="form-control">
-                  <button type="submit" class="btn btn-default">Submit</button>
-                </div>
-              </div>
-            </li>
+            <?php 
+            $varMenu = menu_tree_all_data('main-menu');
+              foreach ($varMenu as $key => $value) {
+                $conSubMenu = count($value['below']);
+                $tit = strtolower($value['link']['link_title']);
+                $alias = drupal_get_path_alias($value['link']['link_path']);
+                $alias2 = drupal_get_path_alias(arg(0)."/".arg(1));
+                if($tit == 'home' && $alias2 == 'node/'  ){ ?>
+                  <li class="active">
+                <?php }else{ ?>
+                  <li class="">
+                <?php }?>
+                      <a href="<?php print_r($alias)?>">
+                        <span class="icon-miller-<?php print_r($tit); ?> s-i"></span><?php print_r($value['link']['link_title'])?>
+                      </a>                      
+                    </li>
+                    <?php 
+                  } 
+                ?>
+              <?php $block = module_invoke('search', 'block_view','form');
+                print render($block['content']); 
+              ?>
           </ul>
           <!--dashboard-->
           <?php $block = module_invoke('BRM_millerlite', 'block_view','user_module');
@@ -215,29 +225,6 @@ render($page['content']['metatags']);
     </div>
   </div>
   <!--Footer-->
-  <footer class="navbar navbar-default navbar-fixed-bottom del-ft">
-    <div class="container-fluid">
-      <article class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-        <p class="log-imt"><img src="svg/its-miller-time.svg" alt="Miller Lite" class="pd-log"></p>
-      </article>
-      <article class="col-lg-10 col-md-10 col-sm-12 col-xs-12 ft-mob">
-        <ul class="list-bl">
-          <li><a href="#" title="">· Preguntas Frecuentes </a></li>
-          <li><a href="#" title="">· Contáctenos </a></li>
-          <li><a href="#" title="">· Encuentranos </a></li>
-          <li><a href="#" title="">· Consumo Responsable </a></li>
-          <li><a href="#" title="">· Mapa del Sitio </a></li>
-          <li><a href="#" title="">· Politica de Privacidad </a></li>
-          <li><a href="#" title="">· Términos de eso </a></li>
-          <li class="navbar-right pd-gen-ta">
-            <ul class="leg-bar">
-              <li>
-                <p class="leg-txt">Prohíbese el expendio de bebidas embriagantes a menores de edad.<br> El exceso de alcohol es perjudicial para la salud.</p>
-              </li>
-              <li class="pd-ta"><a href="#"><img src="svg/talking-alcohol-ml.svg" alt="Miller Lite" class="pd-dir"></a></li>
-            </ul>
-          </li>
-        </ul>
-      </article>
-    </div>
-  </footer>
+  <?php $block = module_invoke('BRM_millerlite', 'block_view','footer_miller');
+            print render($block['content']); 
+  ?>

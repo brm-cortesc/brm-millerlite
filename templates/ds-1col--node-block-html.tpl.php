@@ -31,7 +31,15 @@ if(isset($content['body']["#object"]->field_tipo_plantilla_html['und'][0]['value
     </div>
 <?php
 /* Boques Linkeables*/
-}elseif($content["field_tipo_plantilla_html"]["#object"]->field_tipo_plantilla_html['und'][0]['value'] == '2'){
+}elseif($content["field_tipo_plantilla_html"]["#object"]->field_tipo_plantilla_html['und'][0]['value'] == '2'){ ?>
+
+<!-- Cambios de mar -->
+        <div class="container-fluid l-btns">
+          <div class="row">
+
+          
+<!-- Cambios de mar -->
+<?php
   $nodes = array();
   //var_dump($content["field_tipo_plantilla_html"]["#object"]->field_botones_linkeados['und']);
   //var_dump($content["field_tipo_plantilla_html"]["#object"]->field_botones_linkeados);
@@ -46,16 +54,22 @@ if(isset($content['body']["#object"]->field_tipo_plantilla_html['und'][0]['value
 //var_dump($nodes);
       foreach ($nodes as $key => $value3) {
         $men = menu_link_load($value3->field_link_html['und'][0]['mlid']) ?>
-        <div>
-          <a href="<?php print_r($base_path.drupal_get_path_alias($men["link_path"])); ?>">
-            <?php print_r($value3->field_label_html['und'][0]['value'])?>
-            <img style="width: 380px !important; height: 380px;" src="<?php print_r(file_create_url($value3->field_imagen_linked['und'][0]['uri'])) ?>" /> 
-          </a> 
-        </div>
+        <div class="u-box col-lg-4 col-md-4 col-sm-6 col-xs-12">
+              <div class="u-box-img">
+                 <img src="<?php print_r(file_create_url($value3->field_imagen_linked['und'][0]['uri'])) ?>" alt="miller_lite_moments" />
+              </div>              
+              <div class="u-box-text">
+                 <h3><?php print_r($value3->field_label_html['und'][0]['value'])?></h3>
+              </div>
+              <a href="<?php print_r($base_path.drupal_get_path_alias($men["link_path"])); ?>"> </a> 
+            </div>
         <?php 
       } 
     //} 
-  }
+  } ?>
+              </div>
+        </div>
+<?php
 /* Video + Titulo*/ 
 }elseif($content["field_tipo_plantilla_html"]["#object"]->field_tipo_plantilla_html['und'][0]['value'] == '3'){
 
