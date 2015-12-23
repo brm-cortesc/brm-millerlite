@@ -1,5 +1,7 @@
 <div class="col-lg-2 col-md-3 col-sm-12 col-xs-12 p-center">
-	<?php 
+    <div class="row">
+      <div class="col-xs-8 col-sm-6">
+        	<?php 
 	if(isset($variables['userLoging']) && $variables['userLoging']==0){
 	?>
 	<p><a onclick="abrir_login()" class="ing-men" style="cursor:pointer;">Ingresar</a></p>
@@ -9,8 +11,11 @@
 		$block = module_invoke('user', 'block_view','login');
 	    print render($block['content']); 
 	} ?>
-	<div class="visible-lg visible-md"><?php $block = module_invoke('search', 'block_view','form');
+      </div>
+      <div class="col-xs-4 col-sm-6 visible-lg visible-md">
+        <?php $block = module_invoke('search', 'block_view','form');
                   print render($block['content']); 
-                  ?></div>
-</div>
-
+                  ?>
+      </div>
+    </div>
+ </div>
