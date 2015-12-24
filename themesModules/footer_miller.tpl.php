@@ -1,5 +1,5 @@
 <?php global $base_url; ?>
-    <footer class="container-fluid navbar navbar-default del-ft">
+    <footer class="container-fluid navbar navbar-default navbar-fixed-bottom del-ft">
     
     <article class="col-lg-3 col-md-1 col-sm-12 col-xs-12">
       <p class="log-imt"><img src="<?php print_r($base_url.'/sites/all/themes/millerLiteColTheme/images/its-miller-time.png'); ?>" alt="Miller Lite" class="pd-log"></p>
