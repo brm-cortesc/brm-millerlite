@@ -106,10 +106,6 @@ render($page['content']['metatags']);
   ?>
 </div>
 <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"></div>
-    </div>
-  </div>
   <section class="container-fluid">
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bg-men">
@@ -122,18 +118,16 @@ render($page['content']['metatags']);
               </div>
             </div>
             <div class="col-lg-8 col-md-7 col-sm-10 col-xs-10">
-              
-                <h1 class="p-cent-log">
-                  <?php 
-                    if ($site_logo):
-                      print $site_logo; 
-                    endif; ?>
-                </h1>
-              
+              <h1 class="p-cent-log">
+                <?php 
+                if ($site_logo):
+                  print $site_logo; 
+                endif; ?>
+              </h1>
             </div>
             <?php $block = module_invoke('BRM_millerlite', 'block_view','user_login');
-                  print render($block['content']); 
-                  ?>
+              print render($block['content']); 
+            ?>
           </div>
         </section>
         <!--/s-Menu-->
@@ -216,15 +210,16 @@ render($page['content']['metatags']);
   <div class="container-fluid">
     <div class="row">
       <div class="">
-<?php print $messages; ?>
-          <?php print render($page['help']); ?>
-          <?php $block = module_invoke('BRM_millerlite', 'block_view','slider_prin_home');
-            print render($block['content']); 
-          ?>
+        <?php print $messages; ?>
+        <?php print render($page['help']); ?>
+        <?php $block = module_invoke('BRM_millerlite', 'block_view','slider_prin_home');
+          print render($block['content']); 
+        ?>
       </div>
     </div>
   </div>
-  <!--Footer-->
-  <?php $block = module_invoke('BRM_millerlite', 'block_view','footer_miller');
+</div>
+<?php $block = module_invoke('BRM_millerlite', 'block_view','footer_miller');
             print render($block['content']); 
-  ?>
+            ?>
+          
