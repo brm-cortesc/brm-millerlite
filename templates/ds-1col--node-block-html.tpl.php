@@ -126,8 +126,7 @@ if(isset($content['body']["#object"]->field_tipo_plantilla_html['und'][0]['value
           <?php }?>
               <img src="<?php print_r(file_create_url($value["uri"]))?>" alt="<?php print_r($value["alt"])?>">
               <div class="carousel-caption">
-              <h2>Chania</h2>
-              <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+              <p>IR A LITE EXPERIENCE</p>
             </div>
             </div>
          <?php
@@ -144,6 +143,34 @@ if(isset($content['body']["#object"]->field_tipo_plantilla_html['und'][0]['value
     </a>
 </div>  
 <?php 
+}elseif($content["field_tipo_plantilla_html"]["#object"]->field_tipo_plantilla_html['und'][0]['value'] == '7'){ ?>
+  <div class="container-fluid l-btns">
+    <div class="row">
+      <?php
+      $nodes = array();
+      foreach ($content["field_tipo_plantilla_html"]["#object"]->field_botones_linkeados as $key => $values) {  
+        foreach ($values as $key => $value) {
+          $nodes[] = field_collection_item_load($value['value'], $reset = FALSE);
+        }
+        foreach ($nodes as $key => $value3) { 
+          $men = menu_link_load($value3->field_link_html['und'][0]['mlid']) ?>
+          <div class="u-box col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="u-box-img">
+              <img src="<?php print_r(file_create_url($value3->field_imagen_linked['und'][0]['uri'])) ?>" alt="miller_lite_moments" />
+            </div> 
+            <?php if(isset($value3->field_label_html['und'][0]['value'])){ ?>            
+            <div class="u-box-text">
+              <h3><?php print_r($value3->field_label_html['und'][0]['value'])?></h3>
+            </div>
+            <?php } ?>
+            <a target="_blank" href="<?php print_r($value3->field_link_externo['und'][0]['value']); ?>"> </a> 
+          </div>
+        <?php 
+        }  
+      } ?>
+    </div>
+  </div>
+<?php
 }
 }
 ?>

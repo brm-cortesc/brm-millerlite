@@ -215,30 +215,7 @@ render($page['content']['metatags']);
 </div>
     </div>
   </div>
-  <!--Footer-->
-  <footer class="navbar navbar-default navbar-fixed-bottom del-ft">
-    <div class="container-fluid">
-      <article class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-        <p class="log-imt"><img src="svg/its-miller-time.svg" alt="Miller Lite" class="pd-log"></p>
-      </article>
-      <article class="col-lg-10 col-md-10 col-sm-12 col-xs-12 ft-mob">
-        <ul class="list-bl">
-          <li><a href="#" title="">· Preguntas Frecuentes </a></li>
-          <li><a href="#" title="">· Contáctenos </a></li>
-          <li><a href="#" title="">· Encuentranos </a></li>
-          <li><a href="#" title="">· Consumo Responsable </a></li>
-          <li><a href="#" title="">· Mapa del Sitio </a></li>
-          <li><a href="#" title="">· Politica de Privacidad </a></li>
-          <li><a href="#" title="">· Términos de eso </a></li>
-          <li class="navbar-right pd-gen-ta">
-            <ul class="leg-bar">
-              <li>
-                <p class="leg-txt">Prohíbese el expendio de bebidas embriagantes a menores de edad.<br> El exceso de alcohol es perjudicial para la salud.</p>
-              </li>
-              <li class="pd-ta"><a href="#"><img src="svg/talking-alcohol-ml.svg" alt="Miller Lite" class="pd-dir"></a></li>
-            </ul>
-          </li>
-        </ul>
-      </article>
-    </div>
-  </footer>
+<?php $block = module_invoke('BRM_millerlite', 'block_view','footer_miller');
+            print render($block['content']); 
+            ?>
+          
