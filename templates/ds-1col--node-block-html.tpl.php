@@ -30,7 +30,7 @@ if(isset($content['body']["#object"]->field_tipo_plantilla_html['und'][0]['value
         </div>
     </div>
 <?php
-/* Boques Linkeables*/
+/* Boques Linkeables*/  
 }elseif($content["field_tipo_plantilla_html"]["#object"]->field_tipo_plantilla_html['und'][0]['value'] == '2'){ ?>
 
 <!-- Cambios de mar -->
@@ -57,10 +57,12 @@ if(isset($content['body']["#object"]->field_tipo_plantilla_html['und'][0]['value
         <div class="u-box col-lg-4 col-md-4 col-sm-6 col-xs-12">
               <div class="u-box-img">
                  <img src="<?php print_r(file_create_url($value3->field_imagen_linked['und'][0]['uri'])) ?>" alt="miller_lite_moments" />
-              </div>              
+              </div> 
+              <?php if(isset($value3->field_label_html['und'][0]['value'])){ ?>            
               <div class="u-box-text">
                  <h3><?php print_r($value3->field_label_html['und'][0]['value'])?></h3>
               </div>
+              <?php } ?>
               <a href="<?php print_r($base_path.drupal_get_path_alias($men["link_path"])); ?>"> </a> 
             </div>
         <?php 

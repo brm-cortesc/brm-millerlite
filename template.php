@@ -86,49 +86,39 @@ function millerLiteColTheme_preprocess_page(&$vars) {
 	drupal_add_css(path_to_theme() . '/css/brmfiles/bootstrap.min.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
 	drupal_add_css(path_to_theme() . '/css/brmfiles/millerLite-drupal.min.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
 	drupal_add_css(path_to_theme() . '/css/brmfiles/jasny-bootstrap.min.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
-	drupal_add_css(path_to_theme() . '/css/brmfiles/style.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
+	//drupal_add_css(path_to_theme() . '/css/brmfiles/style.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
 	drupal_add_js(path_to_theme() . '/js/jasny-bootstrap.min.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
 	drupal_add_css(path_to_theme() . '/css/style-beertime.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
 	
-	
-	//setcookie('validarEdad', '', time() - 60);
+
+	//setcookie('ml_accesoF', '', time() - 60);
 	// Se valida si existe una cookie de la edad
-	//var_dump($_COOKIE['validarEdad']);
-	if (isset($_COOKIE['validarEdad']) && ($_COOKIE['validarEdad'])==1){
+	//var_dump($_COOKIE["ml_accesoF"]);
+	if (!isset($_COOKIE['ml_accesoF'])){
 		//drupal_add_js(path_to_theme() . '/js/jquery.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
 		drupal_add_js(path_to_theme() . '/js/libs/bootstrap.min.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
 		drupal_add_css(path_to_theme() . '/css/styleHaspe.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
 		drupal_add_js(path_to_theme() . '/js/validacionInicio.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
 		drupal_add_js(drupal_get_path('module', 'BRM_millerlite') . '/js/brmMiller.js');
 		
-	}elseif(isset($_COOKIE['validarEdad']) && ($_COOKIE['validarEdad'])==2){
-		drupal_add_css(path_to_theme() . '/css/vendor/foundation.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
-		drupal_add_css(path_to_theme() . '/css/estilos.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
-		drupal_add_css(path_to_theme() . '/css/estilos2.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
-		drupal_add_css(path_to_theme() . '/css/webfonkit.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
-		drupal_add_css(path_to_theme() . '/css/mainqueries.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
-		drupal_add_css(path_to_theme() . '/css/animate.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
-		drupal_add_css(path_to_theme() . '/js/chosen/chosen.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
-		$vars['theme_hook_suggestions'][] = 'page__menoredad';
-	}else{
+	}elseif(isset($_COOKIE['ml_accesoF']) && ($_COOKIE['ml_accesoF'])=='3sm3nor43d4d'){
 		drupal_add_js(path_to_theme() . '/js/tabs/jquery.tabslet.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
-	drupal_add_js(path_to_theme() . '/js/vendor/jquery.tabslet.min.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
-	drupal_add_js(path_to_theme() . '/js/vendor/rainbow-custom.min.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
-	drupal_add_js(path_to_theme() . '/js/vendor/jquery.anchor.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
-	drupal_add_js(path_to_theme() . '/js/tabs/initializers.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
-	drupal_add_js(path_to_theme() . '/js/popup.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
-	
+		drupal_add_js(path_to_theme() . '/js/vendor/jquery.tabslet.min.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
+		drupal_add_js(path_to_theme() . '/js/vendor/rainbow-custom.min.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
+		drupal_add_js(path_to_theme() . '/js/vendor/jquery.anchor.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
+		drupal_add_js(path_to_theme() . '/js/tabs/initializers.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
+		drupal_add_js(path_to_theme() . '/js/popup.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
+		
 		drupal_add_js(path_to_theme() . '/js/vendor/modernizr.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
 		drupal_add_js(path_to_theme() . '/js/jquery.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
 		drupal_add_js(path_to_theme() . '/js/validacionInicio.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
 		drupal_add_js(path_to_theme() . '/js/ga.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
 		drupal_add_js(path_to_theme() . '/js/tabs/jquery.tabslet.min.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
-	
-		drupal_add_css(path_to_theme() . '/css/vendor/foundation.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
-		drupal_add_css(path_to_theme() . '/css/estilos.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
-		drupal_add_css(path_to_theme() . '/css/estilos2.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
+		
+		drupal_add_css(path_to_theme() . '/css/estilos-ss.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
+		drupal_add_css(path_to_theme() . '/fonts/fonts.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
+		drupal_add_css(path_to_theme() . '/css/testCris.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
 		drupal_add_css(path_to_theme() . '/css/webfonkit.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
-		drupal_add_css(path_to_theme() . '/css/mainqueries.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
 		drupal_add_css(path_to_theme() . '/css/animate.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
 		drupal_add_css(path_to_theme() . '/js/chosen/chosen.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
 		$vars['theme_hook_suggestions'][] = 'page__validarEdad';

@@ -1,3 +1,154 @@
+.btn-ver-mas {
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+  top: 200px;
+}
+
+.btn-ver-mas:hover {
+  background-color: rgba(1,33,77,0.6);
+  border: 1px solid white;
+}
+
+.btn-ver-mas:hover h5 {
+  color: #FFF;
+}
+
+.btn-ver-mas a{
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+}
+
+.btn-ver-mas h5{
+	color: #01214d;
+	font-size: 1em;
+	margin: 0;
+}
+
+.u-box-moments {
+  padding: 4em;
+}
+.u-box-moments-content {
+  background-color: rgba(1,33,77,0.6);
+  border-radius: 5px;
+  padding: 0;
+}
+.u-box-moments-img {
+  height: 230px;
+  overflow: hidden;
+  padding: 0;
+}
+.u-box-moments-img img {
+  height: auto;
+  width: 100%;
+  -o-transition: width linear 0.3s;
+  -ms-transition: width linear 0.3s;
+  -webkit-transition: width linear 0.3s;
+  -moz-transition: width linear 0.3s;
+  transition: width linear 0.3s;
+}
+.u-box-moments-img:hover img{
+  height: auto;
+  width: 120%;
+}
+.u-box-moments-text {
+  height: 230px;
+  padding: 3em;
+}
+
+.u-box-moments-text h2 {
+  color: #FFF;
+}
+
+.u-box-moments-text p {
+  /*color: #01214d;*/
+  color: #FFF;
+  text-align: left;
+}
+
+.u-linea {
+  color: #fff;
+  margin: 1em 0;
+  width: 100%;
+}
+
+.u-title-moments {
+  background-color: rgba(0,0,0,0.6);
+  margin-top: -1em;
+}
+.u-title-moments h2 {
+  color: #FFF;
+  text-align:  center;
+}
+
+
+
+/*media-queries*/
+
+/* Small Devices, Tablets*/
+@media only screen and (max-width : 767px){
+
+	.u-box-img {
+    	height: 460px !important;
+	}
+
+	.u-box-text {
+    	top: 20em;
+    }
+
+    .u-box-text h3 {
+    	padding: 1em 0;
+    	font-size: 2.5em;
+    }
+}
+
+/* Small Devices, Tablets*/
+@media only screen and (max-width : 630px){
+
+	.u-box-img {
+    	height: 390px !important;
+	}
+
+	.u-box-text {
+    	top: 12em;
+    }
+
+}
+
+/* Small Devices, Tablets*/
+@media only screen and (max-width : 540px){
+
+	.u-box-img {
+    	height: 220px !important;
+	}
+
+	.u-box-text {
+    	top: 5em;
+    }
+}
+
+
+/* Small Devices, Tablets*/
+@media only screen and (max-width : 320px){
+
+	.u-box-img {
+    	height: 185px !important;
+	}
+
+	.u-box-text {
+    	top: 4em;
+    }
+
+    .u-box-text h3 {
+    	padding: 1em 0;
+    	font-size: 2.5em;
+    }
+}
+	
+
 .l-btns{
 	margin: 3em;
 }

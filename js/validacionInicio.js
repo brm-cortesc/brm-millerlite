@@ -1,51 +1,71 @@
 var valid = true;
 
- var edad = function() {
-        if ($('#anio').val() !== "" && $('#mes').val() !== "" && $('#dia').val() !== "" && valid) {
-            var recordar
-            if ($("#recordadDatos").attr('checked')) {
-                recordar = 'S';
-            } else {
-                recordar = 'N';
-            }
-
-            var anio = parseInt($('#anio').val());
-            var mes = parseInt($('#mes').val());
-            var dia = $('#dia').val();
-            var edad = new Date((anio + 18), (mes - 1), $('#dia').val());
-            var fecha = new Date();
-            if (edad > fecha) {
-                Animar('diasWrapper', 'wobble');
-                $('.errorEdad').show();
-                var d = new Date();
-                        d.setTime(d.getTime() + (1*24*60*60*1000));
-                        var expires = "expires="+d.toUTCString();
-                        document.cookie = "validarEdad" + "=" + "2" + "; " + expires;
-            } else {
-                $.ajax({
-                    url: "index.php",
-                    method: 'post',
-                    beforeSend: function(){
-                      $('.loading').show();
-                    },
-                    data: {
-                        guardar: true,
-                        anio: anio,
-                        mes: mes,
-                        dia: dia,
-                        recordar: recordar
-                    }
-                }).success(function(resultado) {
-                        $('.loading').hide();
-                        var d = new Date();
-                        d.setTime(d.getTime() + (1*24*60*60*1000));
-                        var expires = "expires="+d.toUTCString();
-                        document.cookie = "validarEdad" + "=" + "1" + "; " + expires;
-                        window.location="index.php";
-                });
-            }
+var edad = function() {
+    if ($('#anio').val() !== "" && $('#mes').val() !== "" && $('#dia').val() !== "" && valid) {
+        //var recordar
+        if ($("#recordadDatos").attr('checked')) {
+            recordar = 'S';
+        } else {
+            recordar = 'N';
         }
-    };
+
+        var anio = parseInt($('#anio').val());
+        var mes = parseInt($('#mes').val());
+        var dia = $('#dia').val();
+        var edad = new Date((anio + 18), (mes - 1), $('#dia').val());
+        var fecha = new Date();
+        if (edad > fecha) {
+            Animar('diasWrapper', 'wobble');
+            $('.errorEdad').show();
+            var esmenor= 'ml_accesoF';
+            var valor= '3sm3nor43d4d';
+            var caducidad = 86400;
+            setCookie(esmenor, valor, caducidad);
+            window.location="http://www.alianzamas18.com/";
+        } else {
+            $.ajax({
+                url: "index.php",
+                method: 'post',
+                beforeSend: function() {
+                    var progressbar = $(".load-bar");
+                    progressLabel = $(".charge-Load-Bar");
+                    var val = 0;
+                    var porce = 0;
+
+                    function progress() {
+                        progressLabel.width(val + "%");
+                        $(".progress-label").text(porce + "%");
+                        val += 1;
+                        porce++;
+                        console.log(val);
+                        if (val <= 100) {
+                            setTimeout(progress, 60);
+                        } else {
+                            $(".progress-label").text("Completo");
+                        }
+                    }
+                    setTimeout(progress, 1000);
+                },
+                data: {
+                    'guardar': 'true',
+                    'anio': anio,
+                    'mes': mes,
+                    'dia': dia,
+                }
+            }).success(function(respuesta) {
+                location.reload();
+            })
+        }
+    }
+};
+
+function abrir_login(){
+    $('.cont-ini-sesion').css('display','block');
+}
+function cerrar_login(){
+     $('.cont-ini-sesion').css('display','none');
+}
+
 function justAnio(e) {
     var keynum = window.event ? window.event.keyCode : e.which;
     if ((keynum >= 48) && (keynum <= 57)) {
@@ -63,28 +83,28 @@ function justAnio(e) {
         valor = $('#anio').val() + number[keynum];
         log = valor.toString().length;
         valor = parseInt(valor);
-       // console.log(valor);
+        // console.log(valor);
         //console.log(valor >= 1990);
-       if (log== 4) {
+        if (log == 4) {
             if (valor >= 1900 && valor <= 2015) {
                 $('#anio').val(valor).attr('disabled', 'disabled');
                 $("#mes").focus();
             } else {
                 $('#anio').val("").removeAttr('disabled');
-              	Animar('anio','wobble');
+                Animar('anio', 'wobble');
             }
-        }else{
-          if(log<4){
-              return true;
-            }else{
-              Animar('anio','wobble');
-              return false;
+        } else {
+            if (log < 4) {
+                return true;
+            } else {
+                Animar('anio', 'wobble');
+                return false;
             }
         }
         return true;
 
     } else {
-      Animar('anios', 'wobble');
+        Animar('anios', 'wobble');
         return /\d/.test(String.fromCharCode(keynum));
     }
 }
@@ -112,15 +132,15 @@ function justMes(e) {
         //console.log(valor);
         if (log == 2 && valor > 0 && valor < 13) {
             $('#mes').val($('#mes').val() + number[keynum]).attr('disabled', 'disabled');
-                $("#dia").focus();
+            $("#dia").focus();
 
             return true;
         } else {
-            if(log==1){
-              return true;
-            }else{
-              Animar('mes','wobble');
-              return false;
+            if (log == 1) {
+                return true;
+            } else {
+                Animar('mes', 'wobble');
+                return false;
             }
         }
     } else {
@@ -130,11 +150,11 @@ function justMes(e) {
 }
 
 function justDia(e) {
-  //verifica que el mes este completo
+    //verifica que el mes este completo
     var valor = $('#mes').val();
     var log = valor.toString().length;
-    if(log==1){
-      $('#mes').val("0"+$('#mes').val()).attr('disabled', 'disabled');
+    if (log == 1) {
+        $('#mes').val("0" + $('#mes').val()).attr('disabled', 'disabled');
     }
     var keynum = window.event ? window.event.keyCode : e.which;
     var valor = "";
@@ -168,7 +188,7 @@ function justDia(e) {
                     } else {
                         mayor = 28;
                     }
-                break;
+                    break;
                 case 3:
                     mayor = 31;
                     break;
@@ -205,7 +225,7 @@ function justDia(e) {
                 //Dia valido
                 $('#dia').val($('#dia').val() + number[keynum]).attr('disabled', 'disabled');
                 if ($('#anio').val() !== "" && $('#mes').val() !== "" && $('#dia').val() !== "") {
-                  edad();
+                    edad();
                 }
             } else {
                 //Fecha Invalida
@@ -252,62 +272,26 @@ function Animar(id, x) {
         $(this).removeClass(x + ' animated');
     });
 };
-$(document).ready(function(){
-	$("#anio").focus();
+$(document).ready(function() {
+    $("#anio").focus();
+    $("#enviar").show();
+    jQuery("#enviar").click(function() {
+        //alert("Click");
+        edad();
+    });
+
+
 });
 
-//Mensaje politica de cookies
-        function GetCookie(name) {
-        var arg=name+"=";
-        var alen=arg.length;
-        var clen=document.cookie.length;
-        var i=0;
 
-             while (i<clen) {
-                 var j=i+alen;
-
-                 if (document.cookie.substring(i,j)==arg)
-                     return "1";
-                 i=document.cookie.indexOf(" ",i)+1;
-                 if (i==0)
-                     break;
-             }
-
-             return null;
-            }
-
-        function aceptar_cookies(){
-            var expire=new Date();
-            expire=new Date(expire.getTime()+7776000000);
-            document.cookie="ml_miller=aceptada; expires="+expire;
-
-            var visit=GetCookie("ml_miller");
-
-            if (visit==1){
-                popbox3();
-            }
-        }
-
-        function abrir_login(){
-            $(".cont-ini-sesion").css('display','block');
-            $(".cont-search").css('display','none');
-        }
-        function abrir_search(){
-            $(".cont-search").css('display','block');
-            $(".cont-ini-sesion").css('display','none');
-        }
-        function cerrar_login(){
-            $(".cont-ini-sesion").css('display','none');
-        }
-        function cerrar_search(){
-            $(".cont-search").css('display','none');
-        }
-
-        $(function() {
-            var visit=GetCookie("ml_miller");
-            if (visit==1){ popbox3(); }
-        });
-
-        function popbox3() {
-            $('#overbox3').toggle();
-        }
+function setCookie(nombre, valor, caducidad) {
+    
+    var caducidad = 2592000;
+ 
+    var expireDate = new Date() //coge la fecha actual
+    expireDate.setDate(expireDate.getDate()+caducidad);
+ 
+    //crea la cookie: incluye el nombre, la caducidad y la ruta donde esta guardada
+    //cada valor esta separado por ; y un espacio
+    document.cookie = nombre + "=" + escape(valor) + "; expires=" + expireDate.toGMTString() + "; path=/";
+}
