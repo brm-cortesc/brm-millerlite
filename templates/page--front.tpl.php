@@ -207,7 +207,7 @@ render($page['content']['metatags']);
       <div class="col-lg-3 col-md-1 col-sm-1 col-xs-12"></div>
     </div>
   </section>
-  <d  iv class="container-fluid">
+  <div class="container-fluid">
     <div class="row">
       <div class="">
         <?php print $messages; ?>

@@ -254,6 +254,12 @@
       </div>
     <?php endif; ?>
 
+
+
+  </div>
+ 
+
+</div>
     <?php if ($page['footer'] || $attribution): ?>
       <div id="footer-wrapper">
         <div class="container clearfix">
@@ -264,6 +270,3 @@
         </div>
       </div>
     <?php endif; ?>
-
-  </div>
-</div>
