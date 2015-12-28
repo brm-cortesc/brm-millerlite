@@ -109,7 +109,7 @@ render($page['content']['metatags']);
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"></div>
     </div>
-  </div>
+</div>
   <section class="container-fluid">
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bg-men">
@@ -205,17 +205,19 @@ render($page['content']['metatags']);
   </section>
   <div class="container-fluid">
     <div class="row">
-      <div class="">
+      <div>
         
            <?php if ($content = render($page['content'])): ?>
               <div id="content" class="region">
                 <?php print $content; ?>
               </div>
             <?php endif; ?>
-</div>
+      </div>
+    
     </div>
-  </div>
-<?php $block = module_invoke('BRM_millerlite', 'block_view','footer_miller');
+    <?php $block = module_invoke('BRM_millerlite', 'block_view','footer_miller');
             print render($block['content']); 
             ?>
+  </div>
+
           
