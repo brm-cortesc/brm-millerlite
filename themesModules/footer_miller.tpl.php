@@ -9,6 +9,7 @@
   <div class="row">
     
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <p class="cent-lst">
       <?php $menu = menu_navigation_links('menu-footer-menu');
            foreach ($menu as $key => $value) {
             $aux = $key;
@@ -21,7 +22,7 @@
            }
             print theme('links', array('links' => $menu,'attributes' => array('class' => array('nav navbar-nav list-bl'))));
         ?>
-     
+     </p>
     </div>
   </div>
 </footer>
