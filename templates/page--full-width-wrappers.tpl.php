@@ -256,7 +256,7 @@
 
     <?php if ($page['footer'] || $attribution): ?>
       <div id="footer-wrapper">
-        <div>
+        <div class="container clearfix">
           <footer<?php print $footer_attributes; ?>>
             <?php print render($page['footer']); ?>
             <?php print $attribution; ?>
