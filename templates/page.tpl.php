@@ -215,9 +215,11 @@ render($page['content']['metatags']);
       </div>
     
     </div>
+
+  </div>
+
     <?php $block = module_invoke('BRM_millerlite', 'block_view','footer_miller');
             print render($block['content']); 
             ?>
-  </div>
 
           

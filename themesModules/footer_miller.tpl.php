@@ -1,16 +1,17 @@
 <?php global $base_url; ?>
 
+<div class="container-fluid max-p-f">
 
-<div class="foot">
-<p class="log-imt"><img src="<?php print_r($base_url.'/sites/all/themes/millerLiteColTheme/images/its-miller-time.png'); ?>" alt="Miller Lite" class="pd-log"></p>  
-</div>
+  <div class="foot">
+  <p class="log-imt"><img src="<?php print_r($base_url.'/sites/all/themes/millerLiteColTheme/images/its-miller-time.png'); ?>" alt="Miller Lite" class="pd-log"></p>  
+  </div>
 
-<footer class="foot">
-  <div class="row">
+  <footer class="foot">
+    <div class="row">
     
-    <div class="col-lg-offset-2 col-lg-7 col-md-12 col-sm-12 col-xs-12">
+      <div class="col-lg-offset-2 col-lg-7 col-md-12 col-sm-12 col-xs-12">
      
-      <?php $menu = menu_navigation_links('menu-footer-menu');
+        <?php $menu = menu_navigation_links('menu-footer-menu');
            foreach ($menu as $key => $value) {
             $aux = $key;
             $onlyconsonants = str_replace(" ", "_", $value["title"]);
@@ -23,9 +24,9 @@
             print theme('links', array('links' => $menu,'attributes' => array('class' => array('nav navbar-nav list-bl'))));
         ?>
     
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
 
 <div class="foot">
@@ -41,4 +42,5 @@
 
     
   </div>
+</div>
 </div>
