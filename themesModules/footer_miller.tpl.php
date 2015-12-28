@@ -8,7 +8,7 @@
 <footer class="foot">
   <div class="row">
     
-    <div class="col-lg-offset-4 col-lg-8 col-md-12 col-sm-12 col-xs-12">
+    <div class="col-lg-offset-2 col-lg-10 col-md-12 col-sm-12 col-xs-12">
      
       <?php $menu = menu_navigation_links('menu-footer-menu');
            foreach ($menu as $key => $value) {
