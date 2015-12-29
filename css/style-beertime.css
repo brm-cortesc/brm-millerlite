@@ -167,7 +167,7 @@
 }
 
 .u-box-img{
-	height: 240px;
+	height: auto;
 	overflow-y: hidden;
 }
 
