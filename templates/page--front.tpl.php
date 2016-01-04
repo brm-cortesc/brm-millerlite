@@ -210,7 +210,6 @@ render($page['content']['metatags']);
   <div class="container-fluid">
     <div class="row">
       <div class="">
-        <?php print $messages; ?>
         <?php print render($page['help']); ?>
         <?php $block = module_invoke('BRM_millerlite', 'block_view','slider_prin_home');
           print render($block['content']); 

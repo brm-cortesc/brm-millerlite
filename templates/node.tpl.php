@@ -107,6 +107,30 @@
 hide($content['comments']);
 hide($content['links']);
 ?>
+
+<!-- TUYO
+
+<div class="container">
+    <ul class="breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Products</a></li>
+    <li class="active">Accessories</li>
+   </ul>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <h3 class="slid-tit">TITULO</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12 img-no-dim">
+        <img src="/millerlite/sites/default/files/img-3_0.png" alt=“ALT DE LA IMAGEN” title="TITULO DE LA IMAGEN" >
+     </div>
+
+       <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12 bg-alt">
+          <p class="slid-txt">
+
+-->
+
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <?php print render($title_prefix); ?>
 
@@ -139,3 +163,30 @@ hide($content['links']);
 
   <?php print render($title_suffix); ?>
 </article>
+
+<!-- TUYO
+
+  </p>
+  <p class="slid-txt">
+           Prueba Miller Lite en Redes Sociales:
+           </p>
+           <ul class="soc-links">
+            <li><a href="https://www.facebook.com/MillerLiteColombia/" alt="facebook Miller Lite" title="facebook Miller Lite"><span class="icon-miller-fb s-i-2"> </span></a></li>
+            <li><a href="https://twitter.com/MillerLiteCol?lang=es" alt="twitter Miller Lite" title="twitter Miller Lite"><span class="icon-miller-tw s-i-2"> </span></a></li>
+          </ul>
+          </p>
+      </div>
+     </div>
+   <div class="row dam-l">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+       <p class="slid-txt-2">&nbsp;</p>
+    </div>
+ </div> 
+<div class="row">
+     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 dam-l-2">
+        &nbsp;
+    </div>
+</div>
+</div>
+
+-->

@@ -30,14 +30,7 @@
                         </h1>
                     </div>
 
-                    <div class="hidden-xs hidden-sm col-md-3 col-md-offset-9 logo-sounds-cont">
-                        <img src="/images/sos_logo.svg" alt="Season of sounds| Miller Lite Colombia">
-                    </div>
-
-                    <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4 hidden-md hidden-lg logo-sounds-cont">
-                        <img src="/images/sos_logo_mb.svg" alt="Season of sounds| Miller Lite Colombia">
-                    </div>
-
+                    
                 </div>
             </div>
 
@@ -77,7 +70,7 @@
                         </p>
 
                         <form action="" class="age-validator validationDateWrapper">
-                            
+                            <input type="checkbox" name="recordar" id="recordar" value="recodar" />Recordarme<br />
                             <div class="row diasWrapper" id="diasWrapper">
 
                                 <div class="col-xs-4 ">

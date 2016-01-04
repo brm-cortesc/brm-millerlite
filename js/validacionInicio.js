@@ -55,6 +55,17 @@ var edad = function() {
             }).success(function(respuesta) {
                 location.reload();
             })
+            var elm = document.getElementById('recordar');
+            if(elm.checked == true){
+                var esmenor= 'ml_accesoF';
+                var caducidad = 100000000;
+                setCookie(esmenor, 'n0', caducidad);
+            }else{
+                var esmenor= 'ml_accesoF';
+                var caducidad = 86400;
+                setCookie(esmenor, 'n0', caducidad);
+            }
+            
         }
     }
 };

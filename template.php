@@ -93,15 +93,15 @@ function millerLiteColTheme_preprocess_page(&$vars) {
 
 	//setcookie('ml_accesoF', '', time() - 60);
 	// Se valida si existe una cookie de la edad
-	//var_dump($_COOKIE["ml_accesoF"]);
-	if (!isset($_COOKIE['ml_accesoF'])){
+	//var_dump($_COOKIE['ml_accesoF']);
+	if ($_COOKIE['ml_accesoF'] == 'n0'){
 		//drupal_add_js(path_to_theme() . '/js/jquery.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
 		drupal_add_js(path_to_theme() . '/js/libs/bootstrap.min.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
 		drupal_add_css(path_to_theme() . '/css/styleHaspe.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
 		drupal_add_js(path_to_theme() . '/js/validacionInicio.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
 		drupal_add_js(drupal_get_path('module', 'BRM_millerlite') . '/js/brmMiller.js');
 		
-	}elseif(isset($_COOKIE['ml_accesoF']) && ($_COOKIE['ml_accesoF'])=='3sm3nor43d4d'){
+	}elseif(!isset($_COOKIE['ml_accesoF']) || ($_COOKIE['ml_accesoF'])=='3sm3nor43d4d'){
 		drupal_add_js(path_to_theme() . '/js/tabs/jquery.tabslet.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
 		drupal_add_js(path_to_theme() . '/js/vendor/jquery.tabslet.min.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
 		drupal_add_js(path_to_theme() . '/js/vendor/rainbow-custom.min.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
