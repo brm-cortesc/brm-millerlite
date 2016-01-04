@@ -100,7 +100,7 @@ render($page['content']['metatags']);
 ?>
 <?php global $base_url; ?>
 <div class="cont-ini-sesion">
-  <a onclick="cerrar_login();" style="cursor:pointer;">X Cerrar</a>
+  <a onclick="cerrar_login();" style="cursor:pointer;" role="button" class="close"><span aria-hidden="true">&times;</span></a>
   <?php $block = module_invoke('user', 'block_view','login');
     print render($block['content']); 
   ?>
