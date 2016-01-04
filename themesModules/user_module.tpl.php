@@ -26,5 +26,5 @@ if($user->uid){ ?>
 		</div>
 	</div>
 <?php }else{ ?>
-  <div class="adv-men">Por favor registrate para acceder al mejor contenido</div>
+<div class="adv-men"><a onclick="abrir_login()" style="cursor:pointer;">Regístrate</a></div>
 <?php } ?>

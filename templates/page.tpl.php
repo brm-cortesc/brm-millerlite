@@ -142,11 +142,11 @@ render($page['content']['metatags']);
         <!--Menu-->
         <div class="navmenu navmenu-default navmenu-fixed-left offcanvas">
           <ul class="nav navmenu-nav visible-xs visible-sm visible-md">
-            <li><a href="../navmenu/"><span class="icon-miller-home s-i"></span>  HOME</a></li>
+            <li><a href="/millerlite/"><span class="icon-miller-home s-i"></span>  HOME</a></li>
             <li class="active"><a href="./"> <span class="icon-miller-miller s-i"></span> MILLER LITE </a></li>
-            <li><a href="../navmenu-reveal/"> <span class="icon-miller-music s-i"></span> MUSIC</a></li>
-            <li><a href="../navbar-offcanvas/"> <span class="icon-miller-litestyle s-i"></span> LITESTYLE</a></li>
-            <li><a href="../navbar-offcanvas/"> <span class="icon-miller-beertime s-i"></span>  BEERTIME</a>
+            <li><a href="/millerlite/litestyle"> <span class="icon-miller-litestyle s-i"></span> LITESTYLE</a></li>
+             <li><a href="/millerlite/music"> <span class="icon-miller-music s-i"></span> MUSIC</a></li>
+            <li><a href="/millerlite/beer-time"> <span class="icon-miller-beertime s-i"></span>  BEERTIME</a>
               <div role="search" class="navbar-form navbar-left">
                 <div class="form-group">
                   <input type="text" placeholder="Search" class="form-control">
