@@ -71,10 +71,11 @@ var edad = function() {
 };
 
 function abrir_login(){
-    $('.cont-ini-sesion').css('display','block');
+    //$('.cont-ini-sesion').css('display','block');
+    $('.cont-ini-sesion').slideDown('fade');
 }
 function cerrar_login(){
-     $('.cont-ini-sesion').css('display','none');
+     $('.cont-ini-sesion').slideUp('fade');
 }
 
 function justAnio(e) {
