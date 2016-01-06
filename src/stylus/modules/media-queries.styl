@@ -1,5 +1,18 @@
-@media only screen and (min-width: 40.063em) and (max-width: 64em)
+//641-1025
+@media only screen and (min-width: 40.063em) and (max-width: 64.063em)
 	
+	footer
+		.list-bl
+			margin 2% 0
+			padding 0
+			text-align center
+			width 100%
+			li
+				display inline-block
+				width 30%
+				a
+					padding-bottom 1rem
+					
 	.busc2
 		margin 0 2% 0 0
 	
@@ -54,6 +67,8 @@
 	
 	.max-p-f
 		position relative
+		.foot .log-imt
+			padding 2% 0
 	
 	.navbar
 		min-height 48px
@@ -74,11 +89,37 @@
 	
 	.p-center
 		background-color Mlmid
+		padding 0.7% 0
+		p .forma-1
+			margin 0
+			.ing-men
+				background #005193 !important
+				color #fff!important
+				font-size 1.1rem !important
+
 	
 	.pd-t
 		padding 1% 0 0 2%
 		text-align center
-	
+		
+	.pic-container .carousel .carousel-inner .item
+		.carousel-caption
+			height auto
+			max-height 100px
+			padding 2% 4%
+			position absolute
+			bottom 0
+			a
+				display inline-block
+				width 100%
+				margin-left 80%
+				.btn-block
+					width 20%
+			.slid-tit
+				font-size 2.5rem
+			.slid-txt
+				margin 0
+		
 	.rec-box
 		background-color none
 		border-radius 5px
@@ -109,7 +150,8 @@
 		line-height 2.4rem
 		margin 6% 0 0% 0
 
-@media only screen and (min-width: 64.063em) and (max-width: 74.938em)
+//1026-1199
+@media only screen and (min-width: 64.125em) and (max-width: 74.938em)
 		
 	footer
 		background-color Mldark
@@ -141,17 +183,29 @@
 		h2
 			margin 0
 			
-		.form-item-search-block-form input
+		// .form-item-search-block-form input
+		// 	background-color transparent
+		// 	border none
+		// 	border-bottom 1px solid Mlmid
+		
+		input#edit-search-block-form--6
 			background-color transparent
 			border none
 			border-bottom 1px solid Mlmid
+			display inline-block
 			
+		input#edit-submit--6
+			background-color transparent
+			border none
+			color transparent
+			display inline-block
+		
 		.form-wrapper
 			
-			input
-				background-color transparent
-				border none
-				color transparent
+			// input
+			// 	background-color transparent
+			// 	border none
+			// 	color transparent
 				
 			&:before
 				color Mlmid
@@ -218,7 +272,7 @@
 		height 60rem
 		background-color Mldark
 	
-	.ct-slide ol 
+	.ct-slide #myCarousel-log .carousel-indicators
 		display none	
 
 	.del-ft
@@ -276,10 +330,13 @@
 	.list-bl
 		margin 0
 		padding 0
+		width 100%
 		li
 			display inline-block
-			padding 0 0 0 1%
 			font-size 1.4rem 
+			padding 0 0 0 1%
+			text-align center
+			width (100%/5)
 	
 	.listado-articulos	
 		.view-content			
@@ -302,16 +359,16 @@
 		text-align center
 		
 		.pic-ct-2 
-			height 5rem
-			margin 0.5em
-			width @height		
+			height 4rem !important
+			margin 0 !important
+			width @height !important		
 
 		.txt-ct-2
-			max-height 6rem
-			padding 0.5em 0
-			width 100%
+			max-height 6rem !important
+			padding 0.5em 0 !important
+			width 100% !important
 			.name-t-2
-				margin 0
+				margin 0 !important
 
 	.name-t-3
 		margin 0 0 0 0%
@@ -450,6 +507,7 @@
 		padding 0 0 0 1.5%
 		color Mldark
 
+// 1200-1440
 @media only screen and (min-width: 75em) and (max-width: 90em)
 	
 	footer
@@ -704,6 +762,7 @@
 		padding 0 0 0 1.5%
 		color Mldark
 
+//1441-1920
 @media only screen and (min-width: 90.063em) and (max-width: 120em)
 		
 	footer a 
@@ -852,18 +911,16 @@
 		text-align center
 		
 		.pic-ct-2 
-			height 5rem
-			margin 0.5em
-			width @height		
+			height 5rem !important
+			margin 0.5em !important
+			width @height !important		
 
 		.txt-ct-2
-			max-height 6rem
-			padding 0.5em 0
-			width 100%
+			max-height 6rem !important
+			padding 0.5em 0 !important
+			width 100% !important
 			.name-t-2
 				margin 0
-			
-	.name-t-2
 	
 	.max-p-f
 		position fixed 
