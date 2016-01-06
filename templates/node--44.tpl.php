@@ -224,7 +224,7 @@ $path_alias = drupal_lookup_path('alias',$path);
 echo url(NULL, array('absolute' => TRUE)), $path_alias;
 ?>" data-width="200" data-type="button_count"></div>
 
-          Comparte:
+         <p class="u-color-white"> Comparte:</p>
             <ul class="soc-links">
             <li><a href="http://www.facebook.com/sharer/sharer.php?t=%23ItsMillerTime+<?php print urlencode ($title); ?>&u=<?php
 $path = current_path();
@@ -244,15 +244,15 @@ echo url(NULL, array('absolute' => TRUE)), $path_alias;
       </div>
      </div>
    <div class="row dam-l">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+      <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
        <p class="slid-txt-2">&nbsp;</p>
-    </div>
+    </div> -->
  </div> 
-<div class="row">
+<!-- <div class="row">
      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 dam-l-2">
         &nbsp;
     </div>
-</div>
+</div> -->
 </div>
 
 
