@@ -116,25 +116,49 @@
 		a
 			color #ffffff
 	
-	// #search-block-form--3
-	// 	.form-item-search-block-form input
-	input #edit-search-block-form--6
-		background-color transparent
-		border none
-		border-bottom 1px solid Mlmid
-			// border-bottom 1px solid white
+	// // #search-block-form--3
+	// // 	.form-item-search-block-form input
+	// input#edit-search-block-form--6
+	// 	background-color transparent
+	// 	border none
+	// 	border-bottom 1px solid Mlmid
+	// 		// border-bottom 1px solid white
 	
-	input #edit-submit--6
-		background-color transparent
-		color transparent
-		border none
+	// // input#edit-search-block-form--6
+
+	// input#edit-submit--6
+	// 	background-color transparent
+	// 	color transparent
+	// 	border none
 	
-	#edit-actions--5
-		&:before
-			color Mlmid
-			content "\e003"
-			font-family 'Glyphicons Halflings'
-			 
+	// #edit-actions--5
+	// 	&:before
+	// 		color Mlmid
+	// 		content "\e003"
+	// 		font-family 'Glyphicons Halflings'
+			
+	#search-block-form--3
+		h2
+			margin 0
+			
+		.form-item-search-block-form input
+			background-color transparent
+			border none
+			border-bottom 1px solid Mlmid
+			
+		.form-wrapper
+			
+			input
+				background-color transparent
+				border none
+				color transparent
+				
+			&:before
+				color Mlmid
+				content "\e003"
+				font-family 'Glyphicons Halflings'
+			
+			
 			
 		// .form-wrapper button
 		// 	background-color transparent
@@ -194,6 +218,8 @@
 		height 60rem
 		background-color Mldark
 	
+	.ct-slide ol 
+		display none	
 
 	.del-ft
 		background-color Mldark
@@ -380,6 +406,10 @@
 	
 	.pd-wt
 		padding 10% 0% 0 3%
+		
+	.rec-box
+		height auto
+		max-height 4.5rem
 	
 	.s-i
 		font-size 2rem
@@ -428,36 +458,36 @@
 			color #ffffff
 			
 	.breadcrumb 
-		padding 0rem 2.3rem
-		margin-bottom 0
-		list-style none
 		border-radius 0		
+		list-style none
+		margin-bottom 0
+		padding 0rem 2.3rem
 
 	.busc2
-		width auto
-		padding-top 19%
-		padding-bottom 0px
-		margin-right 0px
-		margin-left 0px
 		border 0px none
 		box-shadow none
+		margin-left 0px
+		margin-right 0px
+		padding-bottom 0px
+		padding-top 19%
+		width auto
 		
 	.carousel-caption
+		background-color #01214d
+		bottom 0rem
+		color #fff
+		color #fff
+		left 67%
+		opacity .8
+		padding 1% 4% 2% 2%
+		padding-bottom 0
+		padding-top 0
 		position absolute
 		right 0rem
-		top 0rem
-		bottom 0rem
-		left 67%
-		z-index 10
-		padding 1% 4% 2% 2%
-		padding-top 0
-		padding-bottom 0
-		color #fff
-		text-shadow 0 1px 2px rgba(0,0,0,.6)
-		background-color #01214d
 		text-align left
-		opacity .8
-		color #fff
+		text-shadow 0 1px 2px rgba(0,0,0,.6)
+		top 0rem
+		z-index 10
 
 	.c-lg
 		text-align left
@@ -732,6 +762,8 @@
 		height 14rem
 		padding 2% 0 0 0
 		width 100%
+		ol 
+			display none
 	
 	.dam-l
 		border-bottom 1px solid #fff
