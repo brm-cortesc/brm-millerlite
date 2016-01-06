@@ -1,5 +1,5 @@
-//641-1025
-@media only screen and (min-width: 40.063em) and (max-width: 64.063em)
+//642-1024
+@media only screen and (min-width: 40.125em) and (max-width: 64em)
 	
 	footer
 		.list-bl
@@ -12,6 +12,28 @@
 				width 30%
 				a
 					padding-bottom 1rem
+	
+	#search-block-form--3
+		h2
+			margin 0
+		
+		input#edit-search-block-form--6
+			background-color transparent
+			border none
+			border-bottom 1px solid Mlmid
+			display inline-block
+			
+		input#edit-submit--6
+			background-color transparent
+			border none
+			color transparent
+			display inline-block
+		
+		.form-wrapper
+			&:before
+				color Mlmid
+				content "\e003"
+				font-family 'Glyphicons Halflings'
 					
 	.busc2
 		margin 0 2% 0 0
@@ -23,6 +45,9 @@
 		background-color Mldark
 		height 100%
 		width @height
+	
+	.c-lg
+		margin 0 0 15px
 	
 	.dam-l
 		margin 1% 0 0 0
@@ -79,6 +104,7 @@
 		text-align: center
 
 	.navbar-toggle 
+		display block
 		margin 12% 0 0 5%
 		padding 0
 	
@@ -90,7 +116,7 @@
 	.p-center
 		background-color Mlmid
 		padding 0.7% 0
-		p .forma-1
+		.forma-1
 			margin 0
 			.ing-men
 				background #005193 !important
@@ -104,19 +130,24 @@
 		
 	.pic-container .carousel .carousel-inner .item
 		.carousel-caption
+			bottom 0
 			height auto
 			max-height 100px
 			padding 2% 4%
 			position absolute
-			bottom 0
+			top initial
 			a
 				display inline-block
 				width 100%
 				margin-left 80%
 				.btn-block
 					width 20%
+					padding 5px 10px
+					font-size 12px
 			.slid-tit
 				font-size 2.5rem
+				margin 0
+				text-align left
 			.slid-txt
 				margin 0
 		
@@ -150,8 +181,8 @@
 		line-height 2.4rem
 		margin 6% 0 0% 0
 
-//1026-1199
-@media only screen and (min-width: 64.125em) and (max-width: 74.938em)
+//1025-1199
+@media only screen and (min-width: 64.063em) and (max-width: 74.938em)
 		
 	footer
 		background-color Mldark
@@ -182,11 +213,6 @@
 	#search-block-form--3
 		h2
 			margin 0
-			
-		// .form-item-search-block-form input
-		// 	background-color transparent
-		// 	border none
-		// 	border-bottom 1px solid Mlmid
 		
 		input#edit-search-block-form--6
 			background-color transparent
@@ -201,12 +227,6 @@
 			display inline-block
 		
 		.form-wrapper
-			
-			// input
-			// 	background-color transparent
-			// 	border none
-			// 	color transparent
-				
 			&:before
 				color Mlmid
 				content "\e003"
@@ -220,14 +240,14 @@
 		// 	span 
 		// 		color Mlmid
 
-	.b-f
-		position relative
-		a
-			height 100%
-			position absolute
-			right 0
-			top 0
-			width @height	
+	// .b-f
+	// 	position relative
+	// 	a
+	// 		height 100%
+	// 		position absolute
+	// 		right 0
+	// 		top 0
+	// 		width @height	
 			
 	.breadcrumb 
 		padding 0rem 2.3rem
@@ -431,14 +451,15 @@
 			font-size: 1rem
 	
 	.navbar-toggle 
-		position relative
-		padding 0 0 0 0
-		margin 8% 0 0 5%
 		background-color transparent
 		background-image none
 		border 0px solid transparent
 		border-radius 0px
+		display block
 		float left
+		margin 8% 0 0 5%
+		padding 0 0 0 0
+		position relative
 		width 50%
 	
 	.navmenu-nav
@@ -507,19 +528,44 @@
 		padding 0 0 0 1.5%
 		color Mldark
 
-// 1200-1440
+//1200-1440
 @media only screen and (min-width: 75em) and (max-width: 90em)
 	
 	footer
 		background-color Mldark
 		a
 			color #ffffff
+	
+	#search-block-form--3
+		h2
+			margin 0
+		
+		input#edit-search-block-form--6
+			background-color transparent
+			border none
+			border-bottom 1px solid Mlmid
+			display inline-block
+			width 70%
+			
+		input#edit-submit--6
+			background-color transparent
+			border none
+			color transparent
+			display inline-block
+		
+		.form-wrapper
+			&:before
+				color Mlmid
+				content "\e003"
+				font-family 'Glyphicons Halflings'
 			
 	.breadcrumb 
 		border-radius 0		
 		list-style none
 		margin-bottom 0
 		padding 0rem 2.3rem
+
+
 
 	.busc2
 		border 0px none
@@ -543,7 +589,7 @@
 		position absolute
 		right 0rem
 		text-align left
-		text-shadow 0 1px 2px rgba(0,0,0,.6)
+		text-shadow 0 2px 2px rgba(0,0,0,.6) //
 		top 0rem
 		z-index 10
 
@@ -631,6 +677,24 @@
 		text-align center
 		margin 0 0 0 0
 		padding 0 0 0 0
+		
+	.log-w-2 
+		height 100%
+		margin 0px
+		padding 0.5em 0
+		text-align center
+		
+		.pic-ct-2 
+			height 5rem !important
+			margin 0.5em !important
+			width @height !important		
+
+		.txt-ct-2
+			max-height 6rem !important
+			padding 0.5em 0 !important
+			width 100% !important
+			.name-t-2
+				margin 0
 
 	.name-t-3
 		margin 0 0 0 0%
@@ -693,14 +757,15 @@
 			font-size: 1rem
 	
 	.navbar-toggle 
-		position relative
-		padding 0 0 0 0
-		margin 8% 0 0 5%
 		background-color transparent
 		background-image none
 		border 0px solid transparent
 		border-radius 0px
+		display block
 		float left
+		margin 8% 0 0 5%
+		padding 0 0 0 0
+		position relative
 		width 50%
 	
 	// .navbar-toggle
@@ -716,6 +781,9 @@
 
 	.pd-sm2
 		padding 0 13% 0 13%
+	
+	.pd-t
+		text-align center
 
 	.pd-tm-1
 		padding 0 2% 0 1%
@@ -774,14 +842,36 @@
 	// 	a
 	// 		color #ffffff
 	
-	.b-f
-		position relative
-		a
-			height 100%
-			position absolute
-			right 0
-			top 0
-			width @height	
+	#search-block-form--3
+		h2
+			margin 0
+		
+		input#edit-search-block-form--6
+			background-color transparent
+			border none
+			border-bottom 1px solid Mlmid
+			display inline-block
+			
+		input#edit-submit--6
+			background-color transparent
+			border none
+			color transparent
+			display inline-block
+		
+		.form-wrapper
+			&:before
+				color Mlmid
+				content "\e003"
+				font-family 'Glyphicons Halflings'
+	
+	// .b-f
+	// 	position relative
+	// 	a
+	// 		height 100%
+	// 		position absolute
+	// 		right 0
+	// 		top 0
+	// 		width @height	
 		
 	.breadcrumb 
 		padding 0rem 2.3rem
@@ -951,14 +1041,15 @@
 		font-size 1.4rem
 	
 	.navbar-toggle 
-		position relative
-		padding 0 0 0 0
-		margin 6% 0 0 0%
 		background-color transparent
 		background-image none
 		border 0px solid transparent
 		border-radius 0px
-		float left		
+		display block
+		float left
+		margin 6% 0 0 0%
+		padding 0 0 0 0
+		position relative
 	
 	.p-cent-log
 		text-align center
@@ -1046,8 +1137,31 @@
 		height 3.5rem
 		width 80%
 
+//1921
 @media only screen and (min-width: 120.063em)
 	
+	#search-block-form--3
+		h2
+			margin 0
+		
+		input#edit-search-block-form--6
+			background-color transparent
+			border none
+			border-bottom 1px solid Mlmid
+			display inline-block
+			
+		input#edit-submit--6
+			background-color transparent
+			border none
+			color transparent
+			display inline-block
+		
+		.form-wrapper
+			&:before
+				color Mlmid
+				content "\e003"
+				font-family 'Glyphicons Halflings'
+				
 	.dam-l
 		border-bottom 1px solid #fff
 		margin 1% 0 30rem 0
@@ -1064,14 +1178,15 @@
 		position fixed 
 	
 	.navbar-toggle 
-		position relative
-		padding 0 0 0 0
-		margin 6% 0 0 0%
 		background-color transparent
 		background-image none
 		border 0px solid transparent
 		border-radius 0px
+		display block
 		float left
+		margin 6% 0 0 0%
+		padding 0 0 0 0
+		position relative
 	
 
 	.log
