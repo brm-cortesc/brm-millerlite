@@ -223,7 +223,7 @@ $path = current_path();
 $path_alias = drupal_lookup_path('alias',$path);
 echo url(NULL, array('absolute' => TRUE)), $path_alias;
 ?>" data-width="200" data-type="button_count"></div>
-          Comparte:
+          <div class="comparte">Comparte:</div>
             <ul class="soc-links">
             <li><a href="http://www.facebook.com/sharer/sharer.php?t=%23ItsMillerTime+<?php print urlencode ($title); ?>&u=<?php
 $path = current_path();
