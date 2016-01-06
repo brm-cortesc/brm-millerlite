@@ -1,0 +1,52 @@
+//Footer
+
+
+footer.container-fluid.navbar.navbar-default.navbar-fixed-bottom.del-ft
+	article.col-lg-1.col-md-2.col-sm-12.col-xs-12
+			p.log-imt
+				img.pd-log(src='images/its-miller-time.png', alt='Miller Lite')
+
+	article.col-lg-8.col-md-10.col-sm-12.col-xs-12.ft-mob
+		ul.list-bl
+			li
+				a(href='#' title='') · Preguntas Frecuentes 
+			li
+				a(href='#' title='') · Contáctenos 
+			li
+				a(href='#' title='') · Encuentranos 
+			li
+				a(href='#' title='') · Consumo Responsable 
+			li
+				a(href='#' title='') · Mapa del Sitio 
+			li
+				a(href='#' title='') · Politica de Privacidad 
+			li
+				a(href='#' title='') · Términos de eso
+
+	article.col-lg-3.col-md-10.col-sm-12.col-xs-12
+		div.row
+			div.col-lg-8.col-md-12.col-sm-12.col-xs-12
+				p.leg-txt
+					| Prohíbese el expendio de bebidas embriagantes a menores de edad. El exceso de alcohol es perjudicial para la salud. 
+
+			div.col-lg-4.col-md-12.col-sm-12.col-xs-12
+				p.c-lg
+					img.pd-log(src='images/talking-alcohol-ml.png', alt='hablemos de alcohol')
+				
+
+
+
+
+///-Footer
+
+//Scripts
+//-Estos son los scripts que van en todos los htmls del desarrollo
+if debug == true
+	script(src='js/libs/jquery.js')
+	script(src='js/libs/bootstrap.min.js')
+	script(src='js/jasny-bootstrap.min.js')
+
+else
+	script(src="js/libs.frontend-brm.min.js")
+	script(src='js/frontend-brm.js')
+	script(src='js/validarForm.js')

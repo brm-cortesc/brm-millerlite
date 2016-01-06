@@ -1,0 +1,123 @@
+//header
+nav.navbar.navbar-default
+  .container-fluid
+    // Brand and toggle get grouped for better mobile display
+    .navbar-header
+      button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand.visible-xs.visible-md(href='#')
+        img.log(src='svg/logo-miller-vc.svg', alt='Miller Lite' title='Miller Lite')
+    // Collect the nav links, forms, and other content for toggling
+    #bs-example-navbar-collapse-1.collapse.navbar-collapse
+      ul.nav.navbar-nav
+        li.active
+          a(href='#')
+            p.men-task
+              span.icon-miller-home.s-i 
+            p.men-task
+              | HOME
+            
+        li.dropdown
+          a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+            p.men-task
+              span.icon-miller-sounds.s-i  
+            p.men-task
+              | SOUNDS
+              span.caret
+          
+          ul.dropdown-menu
+            li
+              a(href='#') SEASON OF SOUNDS
+            li
+              a(href='#') PLAYLIST
+            li
+              a(href='#') TOP 10 PLAYLIST
+            li.divider(role='separator')
+            li
+              a(href='#') CONCIERTOS
+            li.divider(role='separator')
+            li
+              a(href='#') GANA ENTRADAS
+
+        li.dropdown
+          a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+            p.men-task
+              span.icon-miller-easy.s-i 
+            p.men-task
+              | EASY GOING LIFESTYLE
+              span.caret
+          ul.dropdown-menu
+            li
+              a(href='#') Lite Experience
+            li
+              a(href='#') Ferias y Fiestas
+            li
+              a(href='#') Concursos
+            
+        li.dropdown
+          a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+            p.men-task
+              span.icon-miller-beer.s-i 
+            p.men-task
+              | IT´S MILLER TIME 
+          ul.dropdown-menu
+            li
+              a(href='#') Flagships
+            li
+              a(href='#') Special Deals
+            
+            li.divider(role='separator')
+            li
+              a(href='#') Miler Lite Moments
+            
+        
+        li.dropdown
+          a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+            p.men-task
+              span.icon-miller-logo.s-i 
+            p.men-task
+              | MILLER LITE
+              span.caret
+          ul.dropdown-menu
+            li
+              a(href='#') Historia
+            li
+              a(href='#') Producto
+            
+      ul.nav.navbar-nav.navbar-right
+        
+        li.dropdown
+          a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+            p.men-task
+              span
+                &nbsp;
+            p.men-task
+              | REGÍSTRATE
+              span.caret
+          ul.dropdown-menu
+            li
+              a(href='#') Fb Login
+            li
+              a(href='#') Tw Login
+            
+            li.divider(role='separator')
+            li
+              a(href='#') Registrate con tus datos
+        li.visible-xs.visible-md.visible-lg
+          form.navbar-form.navbar-left(role='search')
+            .form-group
+                input.form-control(type='text', placeholder='Buscar')
+                button.btn.btn-default(type='submit') 
+                  span.icon-miller-search.s-i
+
+
+    
+
+
+
+    // /.navbar-collapse
+  // /.container-fluid
+//header

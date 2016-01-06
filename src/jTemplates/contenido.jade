@@ -1,0 +1,29 @@
+//-Layout Base
+extends partials/base.jade
+
+
+//-Etiqueta Metadescription
+block description
+	meta(name="description", content="Miller Lite" )
+
+
+block content
+
+	section.container-fluid
+		div.row
+			div.col-lg-12.col-md-12.col-sm-12.col-xs-12.bg-men
+				include partials/s-menu
+			div.col-lg-12.col-md-12.col-sm-12.col-xs-12.bg-men
+				include partials/menu
+		div.row.bg-men-3.visible-lg.visible-sm
+			div.col-lg-offset-3.col-lg-6.col-md-10.col-sm-10.col-xs-12
+				include partials/submenu
+			div.col-lg-3.col-md-1.col-sm-1.col-xs-12
+				
+			
+
+				
+
+					
+			
+

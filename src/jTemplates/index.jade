@@ -1,0 +1,61 @@
+//-Layout Base
+extends partials/base.jade
+
+
+//-Etiqueta Metadescription
+block description
+	meta(name="description", content="Miller Lite" )
+
+
+block content
+
+	section.container-fluid
+		div.row.bg-1
+			article.col-lg-2.col-md-2.col-sm-12.col-xs-12.pd-mm.visible-sm.visible-lg
+				div.bar-bl
+					img.img-log(src='images/millerLiteLogo.png', alt='Miller Lite')
+					ul.nav.navbar-nav.navbar-right.visible-sm.busc2
+						li.visible-sm
+							form.navbar-form.navbar-left(role='search')
+								.form-group
+									input.form-control(type='text', placeholder='Buscar')
+									button.btn.btn-default(type='submit') 
+									span.icon-miller-search.s-i
+
+				
+				div.db.visible-lg
+					include partials/dashboard
+				
+				
+			article.col-lg-10.col-md-12.col-sm-12.col-xs-12.fond-1
+				div.header
+					include partials/header
+					include partials/submenu
+				
+				div.pic-container.color
+					div#myCarousel.carousel.slide
+						ol.carousel-indicators
+							li.active(data-target='#myCarousel', data-slide-to='0')
+							li(data-target='#myCarousel', data-slide-to='1')
+							li(data-target='#myCarousel', data-slide-to='2')
+						.carousel-inner
+							.item.active
+								.fill(style="background-image:url('http://placehold.it/1900x1080&text=Slide One');")
+									.carousel-caption
+										h2 Caption 1
+							.item
+								.fill(style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');")
+									.carousel-caption
+										h2 Caption 2
+							.item
+								.fill(style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');")
+									.carousel-caption
+										h2 Caption 3
+						a.left.carousel-control(href='#myCarousel', data-slide='prev',rel='nofollow')
+							span.icon-prev
+						a.right.carousel-control(href='#myCarousel', data-slide='next',rel='nofollow')
+							span.icon-next
+
+				div.db.visible-xs.visible-sm.visible-md
+					include partials/dashboard
+
