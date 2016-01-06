@@ -83,12 +83,13 @@ function millerLiteColTheme_preprocess_page(&$vars) {
 	drupal_add_js(path_to_theme() . '/js/popup.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
 	
 
-	drupal_add_css(path_to_theme() . '/css/brmfiles/bootstrap.min.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
-	drupal_add_css(path_to_theme() . '/css/brmfiles/millerLite-drupal.min.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
-	drupal_add_css(path_to_theme() . '/css/brmfiles/jasny-bootstrap.min.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
-	//drupal_add_css(path_to_theme() . '/css/brmfiles/style.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
 	drupal_add_js(path_to_theme() . '/js/jasny-bootstrap.min.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
+	
+	drupal_add_css(path_to_theme() . '/css/brmfiles/bootstrap.min.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
+	drupal_add_css(path_to_theme() . '/css/brmfiles/jasny-bootstrap.min.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
 	drupal_add_css(path_to_theme() . '/css/style-beertime.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
+	drupal_add_css(path_to_theme() . '/css/brmfiles/millerLite-drupal.min.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
+	//drupal_add_css(path_to_theme() . '/css/brmfiles/style.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
 	
 
 	//setcookie('ml_accesoF', '', time() - 60);
