@@ -4,7 +4,16 @@
 		width 10em
 		
 	input
-		border 1px solid Mldark
+		background-color transparent
+		border 0
+		border-bottom 1px solid Mldark
+		padding 0.4rem
+		transition all ease-in-out 0.3s
+		
+		&:focus
+			border-bottom-color Mlgold
+			outline 0 !important
+			outline none !important
 		
 
 	#edit-submit--4
@@ -12,6 +21,7 @@
 		border 0
 		border-radius 5px
 		color #fff
+		padding 1.2rem
 		transition all ease-in-out 0.2s
 		
 		&:active
@@ -20,25 +30,106 @@
 		&:hover
 			background-color Mldark
 		
+#user-register-form
+	margin 0 auto 13rem
+	max-width 100%
+	width 1140px
 	
-#nueva-cuenta-usuarios
-	padding 1% 15% 0% 28%
-	width 100%
-	background white
-	
-	div, span
-		font-weight bold
-		text-align left
-		font-size 15px
-		color Mlmid
-		padding 0px 0px 0px 0px
-		border 0px
-		border-style solid
-
-	.description
-		font-weight normal
-		color #000000
-		width 90%
+	input
+		background-color transparent
+		border 0
+		border-bottom 1px solid Mldark
+		box-shadow none !important
+		transition all ease-in-out 0.3s
 		
-		a
-			color #005193
+		&:focus
+			border-bottom-color Mlgold
+			outline 0 !important
+			outline none !important
+			
+	#edit-submit
+		background-color Mlmid
+		border 0
+		border-radius 5px
+		color #fff
+		display block
+		margin 0 auto
+		padding 1.2rem
+		transition all ease-in-out 0.2s
+		
+		&:active
+			transform scale(0.9)
+			
+		&:hover
+			background-color Mldark
+			
+	#nueva-cuenta-usuarios
+		padding 1% 15% 0% 28%
+		width 100%
+		background-color Mllight 
+		
+		div, span
+			font-weight bold
+			text-align left
+			font-size 15px
+			color Mlmid
+			padding 0px 0px 0px 0px
+			border 0px
+			border-style solid
+
+		.description
+			font-weight normal
+			color #000000
+			width 90%
+			
+			a
+				color #005193
+		
+
+div.forma-1
+	width 57%
+
+p.forma-1
+	width 40%
+
+.forma-1
+	display inline-block
+	vertical-align middle
+
+	p
+		text-align center
+
+	input
+		background-color transparent
+		border-bottom solid 1px white
+		border-left none
+		border-radius 0 !important
+		border-right none
+		border-top none
+		box-shadow none !important
+		color white !important
+		font-family Roboto !important
+		font-size 1em
+		margin-bottom 5px
+		padding 0
+		text-transform uppercase
+		width 60%
+		
+		&:focus
+			border-bottom-color Mlgold
+			outline 0 !important
+			outline none !important
+		
+	button
+		background-color transparent !important
+		border none !important
+		color white
+		font-size 1.2em
+		&:hover
+		&:active
+		&:focus
+		&:visited
+			outline none !important
+			box-shadow: none !important;
+			border none !important
+			color white !important

@@ -7,6 +7,33 @@ footer
 
 footer a
 	color #ffffff
+	
+
+li
+	a.active
+		color lighten(Mllight, 40%)
+		
+
+#footer-sitemap
+	ul
+		li
+			float none
+			
+		.depth-1
+			display inline-block
+			margin-left 1rem
+			vertical-align top
+			
+			a
+				&:hover
+					color Mlgold
+			
+			li
+				display block
+				
+				a
+					&:hover
+						color Mlgold
 
 .foot
 	background-color Mldark
@@ -30,6 +57,13 @@ footer a
 	display block
 	padding 2% 2% 0% 0%
 	font-size 1.4rem
+	
+
+.nav
+	&>li
+		&>a
+			&:focus
+				background-color transparent !important
 	
 .navbar-nav>li>a 
 	padding-top 0

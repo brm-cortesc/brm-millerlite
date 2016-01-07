@@ -1,2 +1,23 @@
 .breadcrumb 
+	background-color transparent
+	color #fff
+	margin 1% 0 1% 0
 	padding 0 0 0 5%
+	
+	&>a
+		text-decoration none
+		color #fff
+		
+		&:hover
+			text-decoration none
+			color Mlmid
+		
+	li
+		a
+			&:hover, &:focus
+				color Mllight
+		
+		&.active
+			a
+				color lighten(Mlgray, 40%) !important
+	

@@ -2,10 +2,20 @@
 	margin 0
 
 .bg-men
-	background-color Mldark
+	background-color Mldark	
 	padding 0
-
 	
+	&-2
+		background-color Mldark
+		padding-left 0
+		padding-right 0
+
+	&-3
+		background-color Mlmid
+		box-shadow 0 5px 5px 0 rgba(0,0,0,0.2)
+		padding 0
+		position relative
+		z-index 1		
 
 .container-fluid
 	padding-left 0
@@ -14,7 +24,52 @@
 .log
 	width 40%
 
+.navbar-default
+	.navbar-toggle
+		display inline-block
+		
+		.icon-bar
+			background-color #fff
+			
 
+
+	.navbar-toggle
+		background-color transparent !important
+		border none
+		height 3rem
+		position relative
+		transition all ease-in-out 0.3s
+		width @height
+		
+		.icon-bar
+			display block 
+			opacity 0.99
+			transition all ease-in-out 0.3s
+			transform none
+			
+	.collapsed
+			
+		.icon-bar
+			background-color #fff
+				
+			&:nth-child(1)
+				transform rotate(45deg)				
+				
+			&:nth-child(2)
+				margin-top -0.1em
+				opacity 0
+				transform rotate(-45deg)
+				
+			&:nth-child(3)
+				margin-top -0.14em
+				transform rotate(-45deg)
+	
+	
+.navmenu-fixed-left
+	li.active
+		a
+			background-color Mldark
+			color #fff
 
 .navmenu-default,
 	.navbar-default .navbar-offcanvas
@@ -46,28 +101,38 @@
 
 .nav-pills
 	&>li
+		position relative
 		&>a
-			&:active
-				background-color transparent
+			background-color transparent !important
+			&:active, &:focus
+				background-color transparent !important
 				color #01aaf1
 				
 		&:hover
 			
 			&:after
+				background-color Mlred
+				bottom 0
 				content ""
 				display block
 				height 2px
-				background-color Mlred
+				position absolute
+				width 100%
 				
 			a
 				color #01aaf1
 
-		.active
+	li.active
+		
+		&:after
+			background-color Mlred
+			bottom 0
 			content ""
 			display block
 			height 2px
-			background-color Mlred
-			
-			a
-				color #01aaf1
+			position absolute
+			width 100%
+		
+		a
+			color #01aaf1
 				
