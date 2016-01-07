@@ -363,19 +363,22 @@
 	// 		padding 2% 0
 	
 	.max-p-f
-		position absolute
-		bottom 0
+		position relative
+		// bottom 0
 		.foot .log-imt
 			padding 2% 0
 	
 	.navbar
 		min-height 48px
 
+	.navbar-default .navbar-toggle
+		z-index 2
+
 	.navbar-nav p 
 		color #FFF
 		font-size: 1rem
 		text-align: center
-
+		
 	.navbar-toggle 
 		display block
 		margin 12% 0 0 5%
@@ -475,7 +478,19 @@
 		font-size 2.5rem
 		line-height 2.4rem
 		margin 6% 0 0% 0
-		
+
+//940  --- 
+@media only screen and (max-width: 58.750em)
+	
+	.u-box-moments
+		&:nth-child(even)
+			.u-box-moments-content, .u-box-moments-text, .u-box-moments-img
+				transform rotate(180deg)
+			// .u-box-moments-text
+			// 	transform rotate(180deg)
+			// .u-box-moments-img
+			// 	transform rotate(-180deg)
+
 //642-1024  ---  833 *
 @media only screen and (min-width: 40.125em) and (max-width: 64em)
 	
@@ -538,7 +553,8 @@
 		display none
 		
 	.dam-l
-		margin 1% 0 0 0
+		margin 1% 0 0
+		margin-bottom 7rem !important //
 	
 	.forma-1
 		p 
@@ -558,7 +574,18 @@
 		display block
 		
 	.listado-articulos	
-		.view-content			
+		.view-content
+			.views-field-field-resumen
+				width 100%
+
+			.views-field-title
+				display inline-block
+				margin-top -2.3em
+				position relative
+				top 0
+				vertical-align: middle
+				width 73%
+
 			.views-row
 				width (95%/2)
 
@@ -603,6 +630,10 @@
 	
 	.navbar
 		min-height 48px
+		
+	.navbar-default .collapsed .icon-bar
+		&:nth-child(3)
+			margin-top -0.34em
 
 	.navbar-nav p 
 		color #FFF
@@ -700,6 +731,9 @@
 		font-size 2.5rem
 		line-height 2.4rem
 		margin 6% 0 0% 0
+		
+	.u-box-text h3 
+		font-size 4em
 
 //1025-1199  ---  1112 *
 @media only screen and (min-width: 64.063em) and (max-width: 74.938em)
