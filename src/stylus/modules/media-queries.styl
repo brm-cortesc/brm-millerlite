@@ -260,8 +260,8 @@
 			text-align center
 			width 100%
 			li
-				display inline-block
-				width 33%
+				display block
+				width 100%
 				a
 					padding-bottom 1rem
 	
@@ -506,12 +506,12 @@
 	
 	.u-box-moments
 		&:nth-child(odd)
-			.u-box-moments-content, .u-box-moments-text, .u-box-moments-img
+			.u-box-moments-content
 				transform rotate(180deg)
-			// .u-box-moments-text
-			// 	transform rotate(180deg)
-			// .u-box-moments-img
-			// 	transform rotate(-180deg)
+			.u-box-moments-text
+				transform rotate(180deg)
+			.u-box-moments-img
+				transform rotate(-180deg)
 
 //642-1024  ---  833 *
 @media only screen and (min-width: 40.125em) and (max-width: 64em)
