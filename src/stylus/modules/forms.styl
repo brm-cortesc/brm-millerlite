@@ -1,3 +1,104 @@
+#search-form
+
+	#edit-basic
+		&:after
+			bottom 20px
+			color #fff
+			content "\e003"
+			font-family 'Glyphicons Halflings'
+			pointer-events none
+			position absolute
+			right 2.3rem
+			z-index 1
+	
+	.form-wrapper
+		position relative
+		
+		.form-item-keys
+			display inline-block
+			text-align left
+			width 88%
+			
+			// &:after
+			// 	bottom 20px
+			// 	color white
+			// 	content "\e003"
+			// 	font-family 'Glyphicons Halflings'
+			// 	position absolute
+			// 	right 300px
+				
+			label
+				color Mllight 
+				
+			input#edit-keys
+				background-color transparent
+				border none
+				border-bottom 1px solid white
+				color white
+				display inline-block
+				width 100%
+				&:focus
+					outline 0 !important
+					
+		input#edit-submit
+			background-color transparent
+			border none
+			color transparent
+			position relative
+			width 9%
+			z-index 0
+			&:focus
+				outline 0 !important
+			
+		// .views-submit-button
+		// 	display inline-block
+		// 	width auto
+		// 	&:before
+		// 		color white
+		// 		content "\e003"
+		// 		font-family 'Glyphicons Halflings'
+				
+		// 	input#edit-submit-freguntas-frecuentes
+		// 		background-color transparent
+		// 		border none
+		// 		color transparent
+		// 		width 0
+		// 		&:focus
+		// 			outline 0 !important
+	
+		
+#user-login-form
+	label
+		text-align right
+		width 10em
+		
+	input
+		background-color transparent
+		border 0
+		border-bottom 1px solid Mldark
+		padding 0.4rem
+		transition all ease-in-out 0.3s
+		
+		&:focus
+			border-bottom-color Mlgold
+			outline 0 !important
+			outline none !important
+		
+
+	#edit-submit--4
+		background-color Mlmid
+		border 0
+		border-radius 5px
+		color #fff
+		padding 1.2rem
+		transition all ease-in-out 0.2s
+		
+		&:active
+			transform scale(0.9)
+			
+		&:hover
+			background-color Mldark
+			
 #user-login-form
 	label
 		text-align right
@@ -84,6 +185,81 @@
 			
 			a
 				color #005193
+				
+#views-exposed-form-freguntas-frecuentes-block
+	
+	.views-widget-filter-title
+		width 80%
+		display inline-block
+		text-align left
+		
+		label
+			color Mllight 
+			
+		.views-widget .form-item-title		
+			width 100%
+			display inline-block
+			text-align left
+		
+			input#edit-title
+				background-color transparent
+				border none
+				border-bottom 1px solid white
+				box-shadow none !important
+				color white !important
+				font-size 1em 
+				margin-bottom 5px
+				padding 0
+				display inline-block
+				width 100%
+				&:focus
+					outline 0 !important
+			
+			
+			label
+				color Mllight 
+				
+			// .views-widget .form-item-title		
+			// 	input#edit-title
+			// 		background-color transparent
+			// 		border none
+			// 		border-bottom 1px solid white
+			// 		display inline-block
+			// 		width 70%
+			// 		&:focus
+			// 			outline 0 !important
+		
+	.views-submit-button
+		display inline-block
+		width auto
+		&:before
+			color white
+			content "\e003"
+			font-family 'Glyphicons Halflings'
+			
+		input#edit-submit-freguntas-frecuentes
+			background-color transparent
+			border none
+			color transparent
+			width 0
+			&:focus
+				outline 0 !important
+				
+	.views-reset-button
+		display inline-block
+		width auto
+		&:before
+			color white
+			content "\e031"
+			font-family 'Glyphicons Halflings'
+			
+		input#edit-reset
+			background-color transparent
+			border none
+			color transparent
+			width 0
+			&:focus
+				outline 0 !important
 		
 
 div.forma-1
