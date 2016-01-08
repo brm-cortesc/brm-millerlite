@@ -1,8 +1,4 @@
 /*
--Deben ser elementos por default que lucirán igual en todo el sitio, Es .
--Ningún estilo de estos elementos selectores deberá usar !important.
--No usar selectores tipo class o id.  #01214d #005193
-
 	background -moz-linear-gradient(-45deg, #01214d 0%, #005193 73%)
 	background -webkit-linear-gradient(-45deg, #01214d 0%,#005193 73%)
 	background linear-gradient(135deg, #01214d 0%,#005193 73%)
@@ -19,24 +15,14 @@
 ::-moz-selection /* Gecko Browsers */
 	background Mlred
 	color #fff 
-
 	
 a
-	text-decoration none
 	color #fff
+	text-decoration none
 	
 	&:hover
-		text-decoration none
 		color Mlmid
-		
-
-html
-	background Mlmid
-	background linear-gradient(90deg, #01214d, #005193)
-	height 100%
-	margin 0
-	padding 0
-	width 100%
+		text-decoration none
 	
 body
 	background Mlmid
@@ -48,304 +34,50 @@ body
 	overflow-x hidden
 	padding 0
 	width 100%
-
-
-#edit-submit
-		margin 0
-
-#resultados-de-busqueda
-	width 60%
-	margin-left 20%
-	h2
-		color white
-		font-size 3rem
-		
-
 	
-#resultado-unico-de-busqueda
-	border-bottom dotted 1px white
-		
-#search-block-form--2
-	.container-inline
-		margin 0 !important
-		width 100% !important
-
-.comparte
-	color white
-
-.recents-w
-	background none
-	color #005193
-		
-.pd-ct-txt
-	padding 3%
-	color #fff
-	
-.pulp
+footer
+	background-color Mldark
+	margin 0
 	padding 0
-
-.row 
-	margin-right 0px !important
-	margin-left 0px !important
-
-.img-no-dim>img
 	width 100%
-	height auto
+	height 100%
+
+	a
+		color #ffffff
 
 h1
 	font-family akzidenzgrotesk
 
 	
-h2,
-h3
+h2, h3
 	font-family 'akzidenzgrotesk-m', Roboto
 	font-size 1.8rem
 	font-weight bold
 	width 100%
 	letter-spacing 0.1rem
 	
-h4,
-h5
+h4, h5
 	font-family Roboto
 	font-size 1.4em
 h6
 	font-family Roboto
+		
+html
+	background Mlmid
+	background linear-gradient(90deg, #01214d, #005193)
+	height 100%
+	margin 0
+	padding 0
+	width 100%
+
+html, body
+	height 100%
+
+li
+	a.active
+		color lighten(Mllight, 40%)
 	
 p
 	font-family Roboto
 	color #fff
 
-
-.gral-white-cont
-	padding 1em important
-
-.gral-white-cont>p
-	color #565656
-
-.gral-white-cont>span
-	color #565656
-
-.diasWrapper
-	margin-top 3%
-	margin-bottom 3%
-
-.grl-btn, 
-	.blue
-		width 100%
-
-	
-.item-list ul
-	margin 0 0 0.25em 1.5em
-	padding 0
-	list-style-type none !important
-
-.fond-1
-	padding 0
-
-.bg-1
-	background-color Mlgray
-
-.pd-t
-	color Mlmid
-	padding-left 3%
-	
-.feed-w
-	border-bottom solid 1px #bac0c6
-	border-top solid 1px #bac0c6
-	background #dddddd
-	
-.close
-	background none
-	color white
-	text-shadow none
-	opacity 1
-	right 36%
-	position absolute
-	top 0
-
-// dashboard
-
-.log-w
-	background-color Mlgold
-	padding 2% 0 1% 2%
-	margin 0
-
-.log-w div
-	display inline-block
-
-.pic-ct
-	margin 0% 0 0 0
-	width 3rem
-	height 3rem
-	border-radius 40px
-	overflow hidden
-
-.txt-ct
-	width 80%
-	height 2.5 rem
-
-
-.tit-log
-	font-size 1.3rem
-	margin 0 0 0 4%
-
-.name-t
-	color Mlmid 
-	font-size 2rem
-	margin 0 0 0 4%
-	line-height 1rem
-
-
-//Noticias
-.rec-m
-	margin 3% 0 2% 3% !important
-	color Mlmid
-	font-size 17px
-	text-transform uppercase
-
-.b-f
-	height 200px
-	background-color Mlgray
-
-
-.name-t-2
-	color #005193
-	font-size 1.8rem
-	margin 0 0 2% 4%
-	line-height 2rem
-
-.log-w-2
-	padding 0% 0 0% 2%
-	margin 0
-
-.tit-log-2
-	font-size 1.3rem
-	margin 0 0 0 4%
-	color Gris 
-
-
-//recientes
-
-.rec-box
-	background 0 0
-	height 3.5rem
-	width 92%
-	margin 1% 0 0 3%
-	padding 1%
-	border-bottom dotted 1px #005193
-
-.rec-box div
-	display inline-block
-	background none
-
-.name-t-3
-	font-family roboto
-	color #0081d8 !important
-	height auto
-	float left
-	padding 0
-	margin 0% 0 0
-	text-align left
-	font-size 15px
-
-//social
-
-
-
-.s-i-2
-	font-size 5.5rem
-	margin 0 0 0 0
-
-.icon-miller-fb
-	color #3b5998
-
-.icon-miller-tw
-	color #00aced
-
-
-.soc-links
-	margin 0 0 0 0 
-	padding 0 0 0 0
-
-
-.soc-links li 
-	display inline-block
-	list-style none
-	text-decoration none
-	margin 0 0 0 0
-	padding 0 0 0 0
-	width 4.4rem
-
-.soc-links li a
-	text-decoration none
-	&:hover
-		text-decoration none
-		opacity 0.8	
-
-.fill
-	width 100%
-	height 100%
-	backgroungd-size cover
-	
-
-.color
-	width 100%
-	height 26rem
-	background-color #ccc
-
-
-.sp-txt
-	font-weight bold
-
-.slid-txt-2
-	font-size 1rem
-	color #fff
-	margin 0.5% 0 0.5% 0
-
-.adv-men 
-	width 100%
-	height 5rem
-	background-color #005193
-	padding 4%
-	color white
-	font-size 2rem
-	text-align center
-.adv-men a
-	color white
-
-.offcanvas.in
-	background-color Mlgray
-	margin 0
-	padding 0
-
-.views-field-changed
-	text-align right
-	font-size 0.8em
-
-//buscador
-
-.container-inline
-	width 50%
-	margin-left 25%
-	margin-top 20px
-    
-.form-item
-	label
-		color white
-		
-.region
-	.block 
-		#resultados-de-busqueda
-			margin-top 1em
-			h2
-				color Mllight !important
-			ul 
-				color white
-
-.title
-	a
-		font-size 2rem
-		color white
-		text-decoration underline
-
-	
