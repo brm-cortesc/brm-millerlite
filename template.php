@@ -90,7 +90,6 @@ function millerLiteColTheme_preprocess_page(&$vars) {
 	drupal_add_css(path_to_theme() . '/css/style-beertime.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
 	drupal_add_css(path_to_theme() . '/css/brmfiles/millerLite-drupal.min.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
 	//drupal_add_css(path_to_theme() . '/css/brmfiles/style.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
-	
 
 	//setcookie('ml_accesoF', '', time() - 60);
 	// Se valida si existe una cookie de la edad
@@ -101,6 +100,9 @@ function millerLiteColTheme_preprocess_page(&$vars) {
 		drupal_add_css(path_to_theme() . '/css/styleHaspe.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
 		drupal_add_js(path_to_theme() . '/js/validacionInicio.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
 		drupal_add_js(drupal_get_path('module', 'BRM_millerlite') . '/js/brmMiller.js');
+		drupal_add_js(path_to_theme() . '/bxslider/jquery.bxslider.min.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
+		drupal_add_css(path_to_theme() . '/bxslider/jquery.bxslider.css' , array('group' => CSS_DEFAULT, 'every_page' => TRUE));
+
 		
 	}elseif(!isset($_COOKIE['ml_accesoF']) || ($_COOKIE['ml_accesoF'])=='3sm3nor43d4d'){
 		drupal_add_js(path_to_theme() . '/js/tabs/jquery.tabslet.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));

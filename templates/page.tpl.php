@@ -147,12 +147,9 @@ render($page['content']['metatags']);
             <li><a href="/millerlite/litestyle"> <span class="icon-miller-litestyle s-i"></span> LITESTYLE</a></li>
              <li><a href="/millerlite/music"> <span class="icon-miller-music s-i"></span> MUSIC</a></li>
             <li><a href="/millerlite/beer-time"> <span class="icon-miller-beertime s-i"></span>  BEERTIME</a>
-              <div role="search" class="navbar-form navbar-left">
-                <div class="form-group">
-                  <input type="text" placeholder="Search" class="form-control">
-                  <button type="submit" class="btn btn-default">Submit</button>
-                </div>
-              </div>
+               <?php $block = module_invoke('search', 'block_view','form');
+                print render($block['content']); 
+              ?>
             </li>
           </ul>
           <!--dashboard-->

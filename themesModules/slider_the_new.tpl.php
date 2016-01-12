@@ -30,7 +30,9 @@
 					         
                     <div class="log-w-2">
                       <div class="pic-ct-2">
+                        <?php if(isset($value->field_imagen_lo_nuevo_peque_a['und'][0]['uri'])){?>
                       	<img src="<?php print file_create_url($value->field_imagen_lo_nuevo_peque_a['und'][0]['uri']);?>" alt="<?php print file_create_url($value->field_imagen_lo_nuevo_peque_a['und'][0]['alt']);?>" title="<?php print file_create_url($value->field_imagen_lo_nuevo_peque_a['und'][0]['title']);?>"/>
+                        <?php } ?>
                       </div>
                       <div class="txt-ct-2"> 
                         <p class="name-t-2"><?php print $value->title; ?></p>

@@ -158,9 +158,18 @@ hide($content['links']);
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12 img-no-dim">
-        <img src="<?php print file_create_url($node->field_imagen_bbq[LANGUAGE_NONE][0]['uri']); ?>"  alt="<?php print $title; ?>" title="<?php print $title; ?>" >
-     </div>
+      <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12 img-no-dim prin-evento">
+        <ul class="bxslider">
+          <?php foreach ($node->field_imagen_bbq[LANGUAGE_NONE] as $key => $values) { ?>
+            <li><img width="100%" height="100%" src="<?php print file_create_url($values['uri']); ?>"  alt="<?php print $title; ?>" title="<?php print $title; ?>" ></li>
+          <?php } ?>
+        </ul>
+        <div id="bx-pager">
+          <?php $aux = 0; foreach ($node->field_imagen_bbq[LANGUAGE_NONE] as $key => $value) { ?>
+            <a data-slide-index="<?php print_r($aux)?>" href=""><img width="100px" height="100px" src="<?php print file_create_url($value['uri']); ?>" /></a>
+          <?php $aux++;} ?>
+        </div>
+      </div>
 
        <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12 bg-alt">
           <p class="slid-txt">
@@ -218,19 +227,12 @@ hide($content['links']);
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<div class="fb-share-buttonQUITARPARAACTIVAR" data-href="<?php
-$path = current_path();
-$path_alias = drupal_lookup_path('alias',$path);
-echo url(NULL, array('absolute' => TRUE)), $path_alias;
-?>" data-width="200" data-type="button_count"></div>
-          <div class="comparte"><p class="u-color-white">Comparte:</p></div>
-            <ul class="soc-links">
-            <li><a href="http://www.facebook.com/sharer/sharer.php?t=%23ItsMillerTime+<?php print urlencode ($title); ?>&u=<?php
-$path = current_path();
-$path_alias = drupal_lookup_path('alias',$path);
-echo url(NULL, array('absolute' => TRUE)), $path_alias;
-?>" alt="facebook Miller Lite" title="Comparte en Facebook Miller Lite" target="_blank"><span class="icon-miller-fb s-i-2"> </span></a></li>
-            <li><a href="https://twitter.com/intent/tweet?text=%23ItsMillerTime+<?php print urlencode ($title); ?>&url=<?php
+<div class="comparte"><p class="u-color-white">Comparte:</p></div>
+  <ul class="soc-links">
+    <li>
+      <div class="fb-share-button" data-href="<?php print_r($path_alias) ?>" data-layout="button"></div>
+    </li>
+    <li><a href="https://twitter.com/intent/tweet?text=%23ItsMillerTime+<?php print urlencode ($title); ?>&url=<?php
 $path = current_path();
 $path_alias = drupal_lookup_path('alias',$path);
 echo url(NULL, array('absolute' => TRUE)), $path_alias;
